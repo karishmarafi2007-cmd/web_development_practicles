@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 47 - Two Column Layout</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            background-color: #222;
+            color: white;
+            padding: 30px;
+        }
+
+        .content {
+            padding: 30px;
+            background-color: #f5f5f5;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 0;
+        }
+
+        .content h1 {
+            color: #007bff;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+            <h2>Menu</h2>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </aside>
+
+        <main class="content">
+            <h1>Two Column Webpage</h1>
+
+            <p>
+                This webpage demonstrates a two-column layout
+                using CSS Grid.
+            </p>
+
+            <p>
+                The first column contains the navigation menu
+                and the second column contains the main content.
+            </p>
+        </main>
+
+    </div>
+
+</body>
+</html>

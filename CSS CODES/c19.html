@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Navigation</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        nav {
+            background-color: #111827;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 15px 30px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .menu a:hover {
+            background-color: #2563eb;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .menu {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                gap: 5px;
+            }
+
+            .menu a {
+                display: block;
+                background-color: #1f2937;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            My Website
+        </div>
+
+        <div class="menu">
+
+            <a href="#">Home</a>
+
+            <a href="#">About</a>
+
+            <a href="#">Projects</a>
+
+            <a href="#">Contact</a>
+
+        </div>
+
+    </nav>
+
+    <section style="padding:40px;text-align:center;">
+
+        <h1>Responsive Navigation Menu</h1>
+
+        <p>
+            Resize the browser window to see the responsive design.
+        </p>
+
+    </section>
+
+</body>
+</html>

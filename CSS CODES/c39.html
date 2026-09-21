@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Dropdown Menu</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        nav {
+            background: #111827;
+            padding: 15px 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+        }
+
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        .drop-button {
+            color: white;
+            background: #111827;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+
+            position: absolute;
+
+            top: 100%;
+            left: 0;
+
+            min-width: 180px;
+
+            background: white;
+
+            box-shadow: 0 5px 15px #aaa;
+
+            z-index: 5;
+        }
+
+        .dropdown-content a {
+            display: block;
+
+            color: #222;
+
+            padding: 12px;
+
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background: #dbeafe;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .drop-button {
+            background: #2563eb;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="#">Home</a>
+
+        <div class="dropdown">
+
+            <button class="drop-button">
+                Courses ▼
+            </button>
+
+            <div class="dropdown-content">
+
+                <a href="#">HTML</a>
+
+                <a href="#">CSS</a>
+
+                <a href="#">JavaScript</a>
+
+                <a href="#">Python</a>
+
+            </div>
+
+        </div>
+
+        <a href="#">About</a>
+
+        <a href="#">Contact</a>
+
+    </nav>
+
+    <div style="padding:40px;">
+
+        <h1>CSS Dropdown Menu</h1>
+
+        <p>
+            Move the mouse over "Courses" to open the dropdown.
+        </p>
+
+    </div>
+
+</body>
+</html>

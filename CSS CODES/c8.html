@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Float and Clear</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        .image {
+            width: 150px;
+            height: 100px;
+
+            background-color: lightblue;
+
+            float: left;
+
+            margin-right: 20px;
+            margin-bottom: 10px;
+
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        .clear {
+            clear: both;
+
+            background-color: lightgreen;
+            padding: 20px;
+
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Float Property</h1>
+
+    <div class="image">
+        Image
+    </div>
+
+    <p>
+        This paragraph flows around the floated element.
+        The float property allows an element to move to the
+        left or right while surrounding content flows around it.
+    </p>
+
+    <div class="clear">
+        This section uses clear: both.
+    </div>
+
+</body>
+</html>

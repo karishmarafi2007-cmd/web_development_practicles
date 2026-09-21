@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #f4f7fb;
+            color: #222;
+        }
+
+        nav {
+            background-color: #111827;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 15px 8%;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 10;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        .hero {
+            min-height: 80vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 40px;
+
+            background: linear-gradient(
+                135deg,
+                #dbeafe,
+                #f5f3ff
+            );
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .hero span {
+            color: #2563eb;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            background-color: #2563eb;
+
+            color: white;
+
+            padding: 12px 25px;
+
+            margin-top: 20px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+
+        .about {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .skills {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 20px;
+        }
+
+        .skill {
+            background-color: white;
+
+            padding: 25px 40px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 4px 15px #ccc;
+
+            font-weight: bold;
+        }
+
+        .projects {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 25px;
+        }
+
+        .project {
+            background-color: white;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            box-shadow: 0 4px 15px #ddd;
+        }
+
+        .project h3 {
+            color: #2563eb;
+        }
+
+        footer {
+            background-color: #111827;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+        @media (max-width: 600px) {
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <div class="logo">
+            Karishma
+        </div>
+
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero" id="home">
+
+        <div>
+
+            <h1>
+                Hi, I'm <span>Karishma</span>
+            </h1>
+
+            <p>
+                B.Tech Student | Computing & Data Science
+            </p>
+
+            <p>
+                Interested in Programming, Data Science and Web Development.
+            </p>
+
+            <a href="#projects" class="btn">
+                View My Projects
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <div class="about">
+
+            <p>
+                I am a B.Tech student interested in technology,
+                programming and data science. I enjoy learning
+                new technologies and creating practical projects.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+
+    <section id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill">HTML</div>
+
+            <div class="skill">CSS</div>
+
+            <div class="skill">JavaScript</div>
+
+            <div class="skill">Python</div>
+
+            <div class="skill">C</div>
+
+            <div class="skill">DSA</div>
+
+            <div class="skill">Data Science</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+
+    <section id="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="projects">
+
+            <div class="project">
+
+                <h3>Portfolio Website</h3>
+
+                <p>
+                    A personal portfolio website created
+                    using HTML and CSS.
+                </p>
+
+            </div>
+
+            <div class="project">
+
+                <h3>DSA Visualizer</h3>
+
+                <p>
+                    An interactive project for visualizing
+                    arrays, stacks, queues and linked lists.
+                </p>
+
+            </div>
+
+            <div class="project">
+
+                <h3>Python Project</h3>
+
+                <p>
+                    A Python-based programming project
+                    demonstrating reusable modules.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+
+    <section id="contact">
+
+        <h2>Contact Me</h2>
+
+        <div class="about">
+
+            <p>
+                Email: your-email@example.com
+            </p>
+
+            <p>
+                GitHub: github.com
+            </p>
+
+            <p>
+                LinkedIn: linkedin.com
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Karishma. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>

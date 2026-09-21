@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 62 - Responsive Grid</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #ccc;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Responsive Grid Layout</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>HTML</h2>
+            <p>Webpage structure</p>
+        </div>
+
+        <div class="card">
+            <h2>CSS</h2>
+            <p>Webpage styling</p>
+        </div>
+
+        <div class="card">
+            <h2>JavaScript</h2>
+            <p>Webpage interaction</p>
+        </div>
+
+        <div class="card">
+            <h2>Python</h2>
+            <p>Programming</p>
+        </div>
+
+        <div class="card">
+            <h2>Java</h2>
+            <p>Object-oriented programming</p>
+        </div>
+
+        <div class="card">
+            <h2>SQL</h2>
+            <p>Database management</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

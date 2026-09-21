@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 46 - Dashboard Grid</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #f4f4f4;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 70px 1fr;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            grid-row: 1 / 3;
+            background-color: #222;
+            color: white;
+            padding: 25px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 5px;
+        }
+
+        .sidebar a:hover {
+            background-color: #444;
+        }
+
+        .header {
+            background-color: white;
+            padding: 20px;
+            font-size: 24px;
+            box-shadow: 0 2px 5px #ccc;
+        }
+
+        .content {
+            padding: 25px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        @media (max-width: 700px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto 1fr;
+            }
+
+            .sidebar {
+                grid-row: auto;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+            <h2>Dashboard</h2>
+            <a href="#">Home</a>
+            <a href="#">Students</a>
+            <a href="#">Courses</a>
+            <a href="#">Settings</a>
+        </aside>
+
+        <header class="header">
+            Student Dashboard
+        </header>
+
+        <main class="content">
+
+            <h1>Overview</h1>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h2>120</h2>
+                    <p>Students</p>
+                </div>
+
+                <div class="card">
+                    <h2>15</h2>
+                    <p>Courses</p>
+                </div>
+
+                <div class="card">
+                    <h2>25</h2>
+                    <p>Assignments</p>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

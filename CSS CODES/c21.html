@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+        }
+
+        .profile {
+            width: 700px;
+            max-width: 90%;
+            margin: 50px auto;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #bbb;
+            text-align: center;
+        }
+
+        .profile img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #2563eb;
+        }
+
+        h1 {
+            color: #1e3a8a;
+        }
+
+        .info {
+            text-align: left;
+            margin-top: 25px;
+        }
+
+        .info p {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .skill {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 10px 18px;
+            border-radius: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .profile {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="profile">
+
+        <img src="https://via.placeholder.com/150" alt="Student Photo">
+
+        <h1>Karishma Shaik</h1>
+
+        <p>B.Tech – Computing & Data Science</p>
+
+        <div class="info">
+
+            <p>
+                <span class="label">College:</span>
+                Sai University
+            </p>
+
+            <p>
+                <span class="label">Year:</span>
+                Second Year
+            </p>
+
+            <p>
+                <span class="label">CGPA:</span>
+                8.7
+            </p>
+
+            <p>
+                <span class="label">Graduation:</span>
+                2029
+            </p>
+
+            <p>
+                <span class="label">Interests:</span>
+                Programming, Web Development, Data Science
+            </p>
+
+        </div>
+
+        <h2>Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill">C</div>
+            <div class="skill">Python</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">DSA</div>
+            <div class="skill">Data Science</div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

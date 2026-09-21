@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 64 - CSS Transitions</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+
+        .box {
+            width: 200px;
+            height: 150px;
+            margin: 30px auto;
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition:
+                background-color 0.5s,
+                transform 0.5s,
+                border-radius 0.5s;
+        }
+
+        .box:hover {
+            background-color: #28a745;
+            transform: scale(1.2);
+            border-radius: 50%;
+        }
+
+        button {
+            padding: 12px 25px;
+            background-color: #333;
+            color: white;
+            border: none;
+            transition: 0.4s;
+        }
+
+        button:hover {
+            background-color: #007bff;
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Transition Example</h1>
+
+    <div class="box">
+        Hover Me
+    </div>
+
+    <button>Hover Button</button>
+
+</body>
+</html>

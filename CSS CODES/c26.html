@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inheritance and Specificity</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            color: green;
+        }
+
+        .box {
+            color: blue;
+            padding: 20px;
+            background: #eef2ff;
+        }
+
+        #special {
+            color: red;
+        }
+
+        p {
+            color: purple;
+        }
+
+        .important {
+            color: orange;
+        }
+
+        /* Specificity:
+           ID > Class > Element
+        */
+
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Inheritance</h1>
+
+    <div class="box">
+
+        <p>
+            This paragraph inherits some properties
+            from its parent.
+        </p>
+
+        <p class="important">
+            Class selector is more specific than element selector.
+        </p>
+
+        <p id="special" class="important">
+            ID selector has higher specificity than class selector.
+        </p>
+
+    </div>
+
+</body>
+</html>

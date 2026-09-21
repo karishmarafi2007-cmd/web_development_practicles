@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Background Images</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .hero {
+            height: 500px;
+
+            background-image:
+                url("https://picsum.photos/1200/600");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-repeat: no-repeat;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            color: white;
+        }
+
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.6);
+
+            padding: 40px;
+
+            border-radius: 15px;
+        }
+
+        .box {
+            height: 300px;
+
+            margin: 30px;
+
+            background-image:
+                url("https://picsum.photos/600/400?random=10");
+
+            background-size: contain;
+
+            background-position: top right;
+
+            background-repeat: no-repeat;
+
+            background-color: #dbeafe;
+
+            border: 3px solid blue;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Background Image</h1>
+
+            <p>
+                Background size and position are demonstrated.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <div class="box">
+
+        <h2>Background Position Example</h2>
+
+    </div>
+
+</body>
+</html>
