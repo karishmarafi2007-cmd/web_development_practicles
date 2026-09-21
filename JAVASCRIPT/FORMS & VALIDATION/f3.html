@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Strength Checker</title>
+</head>
+
+<body>
+
+    <h2>Password Strength Checker</h2>
+
+    <input type="password" id="password" placeholder="Enter password">
+
+    <p id="result"></p>
+
+    <script>
+        let password = document.getElementById("password");
+        let result = document.getElementById("result");
+
+        password.addEventListener("input", function() {
+
+            let value = password.value;
+
+            if (value.length < 6) {
+                result.innerHTML = "Weak Password";
+                result.style.color = "red";
+            }
+            else if (value.length < 10) {
+                result.innerHTML = "Medium Password";
+                result.style.color = "orange";
+            }
+            else {
+                result.innerHTML = "Strong Password";
+                result.style.color = "green";
+            }
+        });
+    </script>
+
+</body>
+</html>

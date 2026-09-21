@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+</head>
+
+<body>
+
+    <h2>Feedback Form</h2>
+
+    <form id="feedbackForm">
+
+        <input type="text" id="name" placeholder="Your Name">
+        <br><br>
+
+        <textarea id="feedback" placeholder="Enter your feedback"></textarea>
+        <br><br>
+
+        <select id="rating">
+            <option value="">Select Rating</option>
+            <option>Excellent</option>
+            <option>Good</option>
+            <option>Average</option>
+            <option>Poor</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Submit Feedback</button>
+
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let feedback = document.getElementById("feedback").value;
+            let rating = document.getElementById("rating").value;
+            let message = document.getElementById("message");
+
+            if (name === "" || feedback === "" || rating === "") {
+                message.innerHTML = "Please fill all fields.";
+                message.style.color = "red";
+            }
+            else {
+                message.innerHTML = "Thank you for your feedback!";
+                message.style.color = "green";
+            }
+        });
+    </script>
+
+</body>
+</html>

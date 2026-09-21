@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        form {
+            width: 350px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+        }
+
+        #error {
+            color: red;
+        }
+
+        #success {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="registrationForm">
+
+        <h2>Student Registration</h2>
+
+        <input type="text" id="name" placeholder="Enter Name">
+
+        <input type="email" id="email" placeholder="Enter Email">
+
+        <input type="number" id="age" placeholder="Enter Age">
+
+        <select id="course">
+            <option value="">Select Course</option>
+            <option>B.Tech</option>
+            <option>BCA</option>
+            <option>B.Sc</option>
+        </select>
+
+        <input type="password" id="password" placeholder="Enter Password">
+
+        <button type="submit">Register</button>
+
+        <p id="error"></p>
+        <p id="success"></p>
+
+    </form>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let age = document.getElementById("age").value;
+            let course = document.getElementById("course").value;
+            let password = document.getElementById("password").value;
+
+            let error = document.getElementById("error");
+            let success = document.getElementById("success");
+
+            error.innerHTML = "";
+            success.innerHTML = "";
+
+            if (name === "") {
+                error.innerHTML = "Please enter your name.";
+                return;
+            }
+
+            if (email === "") {
+                error.innerHTML = "Please enter your email.";
+                return;
+            }
+
+            if (age === "" || age < 17) {
+                error.innerHTML = "Please enter a valid age.";
+                return;
+            }
+
+            if (course === "") {
+                error.innerHTML = "Please select a course.";
+                return;
+            }
+
+            if (password.length < 6) {
+                error.innerHTML = "Password must contain at least 6 characters.";
+                return;
+            }
+
+            success.innerHTML = "Registration successful!";
+        });
+    </script>
+
+</body>
+</html>

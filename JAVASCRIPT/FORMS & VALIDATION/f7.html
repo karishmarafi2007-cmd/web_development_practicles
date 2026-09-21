@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Validation</title>
+
+    <style>
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        input {
+            margin: 8px;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Dynamic Form Validation</h2>
+
+    <form id="form">
+
+        <input type="text" id="name" placeholder="Name">
+        <span id="nameError" class="error"></span>
+
+        <br>
+
+        <input type="email" id="email" placeholder="Email">
+        <span id="emailError" class="error"></span>
+
+        <br>
+
+        <input type="password" id="password" placeholder="Password">
+        <span id="passwordError" class="error"></span>
+
+        <br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <p id="success"></p>
+
+    <script>
+        document.getElementById("form").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            document.getElementById("nameError").innerHTML = "";
+            document.getElementById("emailError").innerHTML = "";
+            document.getElementById("passwordError").innerHTML = "";
+            document.getElementById("success").innerHTML = "";
+
+            let valid = true;
+
+            if (name === "") {
+                document.getElementById("nameError").innerHTML =
+                    " Name is required";
+                valid = false;
+            }
+
+            if (email === "") {
+                document.getElementById("emailError").innerHTML =
+                    " Email is required";
+                valid = false;
+            }
+
+            if (password.length < 6) {
+                document.getElementById("passwordError").innerHTML =
+                    " Password must have 6 characters";
+                valid = false;
+            }
+
+            if (valid) {
+                document.getElementById("success").innerHTML =
+                    "Form submitted successfully!";
+            }
+        });
+    </script>
+
+</body>
+</html>
