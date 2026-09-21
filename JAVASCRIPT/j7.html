@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Series</title>
+</head>
+<body>
+
+<h2>Fibonacci Series</h2>
+<p id="output"></p>
+
+<script>
+    let n = Number(prompt("Enter number of terms:"));
+
+    let first = 0;
+    let second = 1;
+    let series = "";
+
+    for (let i = 1; i <= n; i++) {
+        series += first + " ";
+
+        let next = first + second;
+        first = second;
+        second = next;
+    }
+
+    document.getElementById("output").innerHTML = series;
+</script>
+
+</body>
+</html>

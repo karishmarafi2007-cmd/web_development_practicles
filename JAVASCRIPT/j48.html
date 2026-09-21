@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GCD of Two Numbers</title>
+</head>
+<body>
+
+<h2>GCD of Two Numbers</h2>
+
+<script>
+    let a = 48;
+    let b = 18;
+
+    let x = a;
+    let y = b;
+
+    while (y !== 0) {
+        let remainder = x % y;
+        x = y;
+        y = remainder;
+    }
+
+    document.write("First Number = " + a + "<br>");
+    document.write("Second Number = " + b + "<br>");
+    document.write("GCD = " + x);
+</script>
+
+</body>
+</html>

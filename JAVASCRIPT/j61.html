@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Palindrome</title>
+</head>
+<body>
+
+<h2>String Palindrome</h2>
+
+<script>
+    let str = "madam";
+
+    let reversed = str.split("").reverse().join("");
+
+    document.write("String = " + str + "<br>");
+
+    if (str === reversed) {
+        document.write("The string is a Palindrome.");
+    } else {
+        document.write("The string is not a Palindrome.");
+    }
+</script>
+
+</body>
+</html>

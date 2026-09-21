@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Sum and Average</title>
+</head>
+<body>
+
+<h2>Sum and Average</h2>
+<p id="output"></p>
+
+<script>
+    let array = [10, 20, 30, 40, 50];
+
+    let sum = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        sum = sum + array[i];
+    }
+
+    let average = sum / array.length;
+
+    document.getElementById("output").innerHTML =
+        "Array = " + array + "<br>" +
+        "Sum = " + sum + "<br>" +
+        "Average = " + average;
+</script>
+
+</body>
+</html>

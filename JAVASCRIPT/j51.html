@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perfect Number</title>
+</head>
+<body>
+
+<h2>Perfect Number</h2>
+
+<script>
+    let number = 6;
+    let sum = 0;
+
+    for (let i = 1; i < number; i++) {
+        if (number % i === 0) {
+            sum += i;
+        }
+    }
+
+    document.write("Number = " + number + "<br>");
+
+    if (sum === number) {
+        document.write(number + " is a Perfect Number.");
+    } else {
+        document.write(number + " is not a Perfect Number.");
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countdown Timer</title>
+
+    <style>
+
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 80px;
+        }
+
+        #timer {
+            font-size: 50px;
+            margin: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Countdown Timer</h2>
+
+    <div id="timer">01:00</div>
+
+    <button onclick="startTimer()">Start</button>
+
+    <script>
+
+        let timeLeft = 60;
+        let timer;
+
+        function startTimer() {
+
+            clearInterval(timer);
+
+            timer = setInterval(function() {
+
+                let minutes =
+                    Math.floor(timeLeft / 60);
+
+                let seconds =
+                    timeLeft % 60;
+
+                minutes =
+                    minutes < 10 ? "0" + minutes : minutes;
+
+                seconds =
+                    seconds < 10 ? "0" + seconds : seconds;
+
+                document.getElementById("timer").innerHTML =
+                    minutes + ":" + seconds;
+
+                timeLeft--;
+
+                if (timeLeft < 0) {
+
+                    clearInterval(timer);
+
+                    document.getElementById("timer").innerHTML =
+                        "Time's Up!";
+
+                }
+
+            }, 1000);
+        }
+
+    </script>
+
+</body>
+</html>

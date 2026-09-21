@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arithmetic Operations</title>
+</head>
+<body>
+
+<h2>Arithmetic Operations</h2>
+
+<script>
+    let a = Number(prompt("Enter first number:"));
+    let b = Number(prompt("Enter second number:"));
+
+    document.write("Addition = " + (a + b) + "<br>");
+    document.write("Subtraction = " + (a - b) + "<br>");
+    document.write("Multiplication = " + (a * b) + "<br>");
+
+    if (b !== 0) {
+        document.write("Division = " + (a / b) + "<br>");
+        document.write("Modulus = " + (a % b) + "<br>");
+    } else {
+        document.write("Division by zero is not possible");
+    }
+</script>
+
+</body>
+</html>

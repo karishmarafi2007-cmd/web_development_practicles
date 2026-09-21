@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Validation</title>
+</head>
+<body>
+
+<h2>Email Validation Using Regular Expression</h2>
+
+<script>
+    let email = "student@example.com";
+
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    document.write("Email = " + email + "<br><br>");
+
+    if (emailRegex.test(email)) {
+        document.write("Valid Email Address");
+    } else {
+        document.write("Invalid Email Address");
+    }
+</script>
+
+</body>
+</html>

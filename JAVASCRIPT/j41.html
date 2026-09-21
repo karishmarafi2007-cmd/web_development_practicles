@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Callbacks Promises Async Await</title>
+</head>
+
+<body>
+
+    <h2>Callbacks, Promises and Async/Await</h2>
+
+    <p id="output"></p>
+
+    <script>
+
+        let output = document.getElementById("output");
+
+        // -------------------------
+        // 1. Callback
+        // -------------------------
+
+        function calculate(a, b, callback) {
+
+            let result = a + b;
+
+            callback(result);
+        }
+
+        calculate(10, 20, function(result) {
+
+            output.innerHTML +=
+                "<b>Callback Result:</b> " +
+                result + "<br><br>";
+        });
+
+
+        // -------------------------
+        // 2. Promise
+        // -------------------------
+
+        let promise = new Promise(function(resolve, reject) {
+
+            let success = true;
+
+            if (success) {
+                resolve("Promise executed successfully!");
+            }
+            else {
+                reject("Promise failed!");
+            }
+        });
+
+        promise
+            .then(function(message) {
+
+                output.innerHTML +=
+                    "<b>Promise:</b> " +
+                    message + "<br><br>";
+
+            })
+            .catch(function(error) {
+
+                output.innerHTML +=
+                    "<b>Error:</b> " +
+                    error + "<br><br>";
+            });
+
+
+        // -------------------------
+        // 3. Async/Await
+        // -------------------------
+
+        async function showAsync() {
+
+            let result = await Promise.resolve(
+                "Async/Await executed successfully!"
+            );
+
+            output.innerHTML +=
+                "<b>Async/Await:</b> " +
+                result;
+        }
+
+        showAsync();
+
+    </script>
+
+</body>
+</html>

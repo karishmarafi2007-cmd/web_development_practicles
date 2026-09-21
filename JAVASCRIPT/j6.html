@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factorial</title>
+</head>
+<body>
+
+<h2>Factorial of a Number</h2>
+<p id="output"></p>
+
+<script>
+    let number = Number(prompt("Enter a number:"));
+    let factorial = 1;
+
+    if (number < 0 || !Number.isInteger(number)) {
+        document.getElementById("output").innerHTML =
+            "Please enter a non-negative integer.";
+    } else {
+        for (let i = 1; i <= number; i++) {
+            factorial = factorial * i;
+        }
+
+        document.getElementById("output").innerHTML =
+            "Factorial of " + number + " = " + factorial;
+    }
+</script>
+
+</body>
+</html>

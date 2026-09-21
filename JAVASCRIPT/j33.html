@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Application</title>
+</head>
+
+<body>
+
+    <h2>JavaScript Quiz</h2>
+
+    <p>1. Which language is used to make webpages interactive?</p>
+
+    <input type="radio" name="q1" value="HTML"> HTML
+    <br>
+
+    <input type="radio" name="q1" value="CSS"> CSS
+    <br>
+
+    <input type="radio" name="q1" value="JavaScript"> JavaScript
+    <br>
+
+    <input type="radio" name="q1" value="Python"> Python
+
+    <br><br>
+
+    <button onclick="checkAnswer()">Submit</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+
+        function checkAnswer() {
+
+            let answer =
+                document.querySelector('input[name="q1"]:checked');
+
+            if (!answer) {
+
+                document.getElementById("result").innerHTML =
+                    "Please select an answer.";
+
+                return;
+            }
+
+            if (answer.value === "JavaScript") {
+
+                document.getElementById("result").innerHTML =
+                    "Correct Answer! 🎉";
+
+            }
+            else {
+
+                document.getElementById("result").innerHTML =
+                    "Wrong Answer. Correct answer is JavaScript.";
+
+            }
+        }
+
+    </script>
+
+</body>
+</html>

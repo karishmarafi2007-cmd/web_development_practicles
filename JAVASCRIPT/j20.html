@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date and Math Objects</title>
+</head>
+<body>
+
+<h2>Date and Math Objects</h2>
+<pre id="output"></pre>
+
+<script>
+    let today = new Date();
+
+    let result =
+        "Current Date and Time: " + today + "\n" +
+        "Year: " + today.getFullYear() + "\n" +
+        "Month: " + (today.getMonth() + 1) + "\n" +
+        "Date: " + today.getDate() + "\n\n" +
+
+        "Square Root of 64: " + Math.sqrt(64) + "\n" +
+        "Power 2^5: " + Math.pow(2, 5) + "\n" +
+        "Round 4.7: " + Math.round(4.7) + "\n" +
+        "Floor 4.7: " + Math.floor(4.7) + "\n" +
+        "Ceil 4.2: " + Math.ceil(4.2) + "\n" +
+        "Random Number: " + Math.random();
+
+    document.getElementById("output").textContent = result;
+</script>
+
+</body>
+</html>
