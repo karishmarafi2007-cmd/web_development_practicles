@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drag and Drop</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        #dragItem {
+            width: 120px;
+            height: 120px;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: grab;
+            border: 2px solid blue;
+        }
+
+        #dropBox {
+            width: 200px;
+            height: 150px;
+            border: 3px dashed black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: lightgray;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<h2>Drag and Drop Application</h2>
+
+<p>Drag the blue box into the drop area.</p>
+
+<div id="container">
+
+    <div
+        id="dragItem"
+        draggable="true">
+
+        Drag Me
+
+    </div>
+
+
+    <div id="dropBox">
+
+        Drop Here
+
+    </div>
+
+</div>
+
+<p id="message"></p>
+
+
+<script>
+
+let dragItem = document.getElementById("dragItem");
+
+let dropBox = document.getElementById("dropBox");
+
+let message = document.getElementById("message");
+
+
+// Drag starts
+dragItem.addEventListener("dragstart", function(event) {
+
+    event.dataTransfer.setData(
+        "text/plain",
+        "dragItem"
+    );
+
+    message.textContent =
+        "Dragging started...";
+});
+
+
+// Allow dropping
+dropBox.addEventListener("dragover", function(event) {
+
+    event.preventDefault();
+
+    dropBox.style.backgroundColor =
+        "lightgreen";
+});
+
+
+// Drop item
+dropBox.addEventListener("drop", function(event) {
+
+    event.preventDefault();
+
+    let data =
+        event.dataTransfer.getData("text/plain");
+
+    if (data === "dragItem") {
+
+        dropBox.appendChild(dragItem);
+
+        dropBox.style.backgroundColor =
+            "lightgreen";
+
+        message.textContent =
+            "Item dropped successfully!";
+    }
+});
+
+
+// When item leaves drop area
+dropBox.addEventListener("dragleave", function() {
+
+    dropBox.style.backgroundColor =
+        "lightgray";
+});
+
+</script>
+
+</body>
+</html>

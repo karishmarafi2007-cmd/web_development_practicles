@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keyboard Controlled Game</title>
+
+    <style>
+
+        #gameArea {
+            width: 500px;
+            height: 300px;
+            border: 3px solid black;
+            position: relative;
+            background-color: lightgray;
+        }
+
+        #player {
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<h2>Keyboard Controlled Game</h2>
+
+<p>
+    Use ↑ ↓ ← → arrow keys to move the red box.
+</p>
+
+<div id="gameArea">
+
+    <div id="player"></div>
+
+</div>
+
+<p id="position">Position: 0, 0</p>
+
+<script>
+
+let player = document.getElementById("player");
+let gameArea = document.getElementById("gameArea");
+let position = document.getElementById("position");
+
+let x = 0;
+let y = 0;
+
+let step = 10;
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "ArrowRight") {
+        x += step;
+    }
+
+    if (event.key === "ArrowLeft") {
+        x -= step;
+    }
+
+    if (event.key === "ArrowDown") {
+        y += step;
+    }
+
+    if (event.key === "ArrowUp") {
+        y -= step;
+    }
+
+
+    // Prevent player from leaving the game area
+
+    let maxX =
+        gameArea.clientWidth - player.offsetWidth;
+
+    let maxY =
+        gameArea.clientHeight - player.offsetHeight;
+
+    if (x < 0) {
+        x = 0;
+    }
+
+    if (y < 0) {
+        y = 0;
+    }
+
+    if (x > maxX) {
+        x = maxX;
+    }
+
+    if (y > maxY) {
+        y = maxY;
+    }
+
+
+    player.style.left = x + "px";
+    player.style.top = y + "px";
+
+    position.textContent =
+        "Position: " + x + ", " + y;
+
+});
+
+</script>
+
+</body>
+</html>
