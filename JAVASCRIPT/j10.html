@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse Number</title>
+</head>
+<body>
+
+<h2>Reverse a Number</h2>
+<p id="output"></p>
+
+<script>
+    let number = prompt("Enter a number:");
+
+    let reverse = number.split("").reverse().join("");
+
+    document.getElementById("output").innerHTML =
+        "Reverse = " + reverse;
+</script>
+
+</body>
+</html>

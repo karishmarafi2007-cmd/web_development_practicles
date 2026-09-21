@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LCM of Two Numbers</title>
+</head>
+<body>
+
+<h2>LCM of Two Numbers</h2>
+
+<script>
+    let a = 12;
+    let b = 18;
+
+    let x = a;
+    let y = b;
+
+    // Find GCD
+    while (y !== 0) {
+        let remainder = x % y;
+        x = y;
+        y = remainder;
+    }
+
+    let gcd = x;
+
+    let lcm = Math.abs(a * b) / gcd;
+
+    document.write("First Number = " + a + "<br>");
+    document.write("Second Number = " + b + "<br>");
+    document.write("LCM = " + lcm);
+</script>
+
+</body>
+</html>

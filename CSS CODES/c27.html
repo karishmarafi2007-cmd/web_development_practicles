@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selectors</title>
+
+    <style>
+
+        /* Universal selector */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Element selector */
+        h1 {
+            color: blue;
+        }
+
+        /* Class selector */
+        .student {
+            color: green;
+        }
+
+        /* ID selector */
+        #special {
+            color: red;
+        }
+
+        /* Attribute selector */
+        input[type="email"] {
+            border: 3px solid purple;
+            padding: 10px;
+        }
+
+        /* Grouping selector */
+        h1, h2, p {
+            font-family: Arial;
+        }
+
+        body {
+            padding: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Selectors</h1>
+
+    <h2>Student Details</h2>
+
+    <p class="student">
+        This uses a class selector.
+    </p>
+
+    <p id="special">
+        This uses an ID selector.
+    </p>
+
+    <input
+        type="email"
+        placeholder="Attribute selector"
+    >
+
+</body>
+</html>

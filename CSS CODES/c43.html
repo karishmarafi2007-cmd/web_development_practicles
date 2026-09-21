@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 42 - CSS Filters</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 220px;
+        }
+
+        img {
+            width: 220px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .blur {
+            filter: blur(4px);
+        }
+
+        .gray {
+            filter: grayscale(100%);
+        }
+
+        .bright {
+            filter: brightness(150%);
+        }
+
+        .contrast {
+            filter: contrast(180%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Filter Effects</h1>
+
+    <div class="gallery">
+
+        <div class="box">
+            <h3>Blur</h3>
+            <img class="blur"
+                 src="https://picsum.photos/id/1015/400/300"
+                 alt="Blur">
+        </div>
+
+        <div class="box">
+            <h3>Grayscale</h3>
+            <img class="gray"
+                 src="https://picsum.photos/id/1016/400/300"
+                 alt="Grayscale">
+        </div>
+
+        <div class="box">
+            <h3>Brightness</h3>
+            <img class="bright"
+                 src="https://picsum.photos/id/1018/400/300"
+                 alt="Brightness">
+        </div>
+
+        <div class="box">
+            <h3>Contrast</h3>
+            <img class="contrast"
+                 src="https://picsum.photos/id/1020/400/300"
+                 alt="Contrast">
+        </div>
+
+    </div>
+
+</body>
+</html>

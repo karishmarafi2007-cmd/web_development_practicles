@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 50 - Fixed Sidebar</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 220px;
+            height: 100vh;
+            background-color: #222;
+            color: white;
+            padding: 25px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 5px;
+        }
+
+        .sidebar a:hover {
+            background-color: #444;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 30px;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+        }
+
+        .box {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 600px) {
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <h2>My Menu</h2>
+
+        <a href="#">Home</a>
+        <a href="#">Profile</a>
+        <a href="#">Courses</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+
+    </aside>
+
+    <main class="content">
+
+        <h1>Fixed Sidebar Example</h1>
+
+        <div class="box">
+            <h2>Section 1</h2>
+            <p>
+                The sidebar remains fixed while the page content
+                can be scrolled.
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>Section 2</h2>
+            <p>
+                Fixed positioning places an element relative
+                to the browser viewport.
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>Section 3</h2>
+            <p>
+                Add more content here and scroll the page to
+                observe the fixed sidebar.
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>Section 4</h2>
+            <p>
+                This section provides additional content for
+                testing scrolling.
+            </p>
+        </div>
+
+    </main>
+
+</body>
+</html>

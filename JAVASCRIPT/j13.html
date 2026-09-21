@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sort Array</title>
+</head>
+<body>
+
+<h2>Sorting an Array</h2>
+<p id="output"></p>
+
+<script>
+    let array = [50, 10, 40, 20, 30];
+
+    array.sort(function(a, b) {
+        return a - b;
+    });
+
+    document.getElementById("output").innerHTML =
+        "Sorted Array = " + array;
+</script>
+
+</body>
+</html>

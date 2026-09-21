@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 51 - Responsive Footer</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+            padding: 50px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 30px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            min-width: 200px;
+        }
+
+        .footer-section h3 {
+            color: #00bfff;
+        }
+
+        .footer-section a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin: 8px;
+        }
+
+        .footer-section a:hover {
+            color: #00bfff;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 25px;
+            border-top: 1px solid #555;
+            padding-top: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <h1>Responsive Footer</h1>
+        <p>Resize the browser window to see the responsive footer.</p>
+    </main>
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-section">
+                <h3>About</h3>
+                <a href="#">About Us</a>
+                <a href="#">Our Team</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <a href="#">Web Design</a>
+                <a href="#">Development</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <a href="#">Email</a>
+                <a href="#">Phone</a>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 My Website
+        </div>
+
+    </footer>
+
+</body>
+</html>

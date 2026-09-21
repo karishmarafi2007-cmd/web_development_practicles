@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Overflow</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 250px;
+            height: 150px;
+
+            border: 3px solid #2563eb;
+
+            padding: 15px;
+        }
+
+        .visible {
+            overflow: visible;
+        }
+
+        .hidden {
+            overflow: hidden;
+        }
+
+        .scroll {
+            overflow: scroll;
+        }
+
+        .auto {
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Overflow</h1>
+
+    <div class="container">
+
+        <div class="box visible">
+
+            <h3>Visible</h3>
+
+            <p>
+                This content demonstrates visible overflow.
+                Extra content can extend outside the box.
+                This is additional text to demonstrate overflow.
+            </p>
+
+        </div>
+
+
+        <div class="box hidden">
+
+            <h3>Hidden</h3>
+
+            <p>
+                Extra content is hidden when overflow is set
+                to hidden. This text will not be completely visible.
+            </p>
+
+        </div>
+
+
+        <div class="box scroll">
+
+            <h3>Scroll</h3>
+
+            <p>
+                Scrollbars are displayed when the content is
+                larger than the available area.
+                More text is added here for demonstration.
+            </p>
+
+        </div>
+
+
+        <div class="box auto">
+
+            <h3>Auto</h3>
+
+            <p>
+                The browser automatically adds scrollbars
+                when required by the content.
+                Additional content is included here.
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

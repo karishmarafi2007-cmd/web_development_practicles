@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Cards</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #f3f4f6;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3a8a;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            width: 250px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px #ccc;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px #aaa;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content h2 {
+            color: #1e3a8a;
+        }
+
+        .price {
+            color: #16a34a;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .button {
+            display: block;
+            text-align: center;
+            background: #2563eb;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Product Card Layout</h1>
+
+    <div class="products">
+
+        <div class="card">
+
+            <img
+                src="https://via.placeholder.com/250x180"
+                alt="Laptop"
+            >
+
+            <div class="content">
+
+                <h2>Laptop</h2>
+
+                <p>
+                    Powerful laptop for students and developers.
+                </p>
+
+                <p class="price">₹55,000</p>
+
+                <a href="#" class="button">
+                    Buy Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <img
+                src="https://via.placeholder.com/250x180"
+                alt="Headphones"
+            >
+
+            <div class="content">
+
+                <h2>Headphones</h2>
+
+                <p>
+                    Comfortable wireless headphones.
+                </p>
+
+                <p class="price">₹2,500</p>
+
+                <a href="#" class="button">
+                    Buy Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <img
+                src="https://via.placeholder.com/250x180"
+                alt="Smart Watch"
+            >
+
+            <div class="content">
+
+                <h2>Smart Watch</h2>
+
+                <p>
+                    Modern smartwatch with useful features.
+                </p>
+
+                <p class="price">₹3,500</p>
+
+                <a href="#" class="button">
+                    Buy Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

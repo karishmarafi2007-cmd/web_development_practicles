@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Palindrome</title>
+</head>
+<body>
+
+<h2>Palindrome Number</h2>
+<p id="output"></p>
+
+<script>
+    let number = prompt("Enter a number:");
+
+    let reverse = number.split("").reverse().join("");
+
+    if (number === reverse) {
+        document.getElementById("output").innerHTML =
+            number + " is a Palindrome";
+    } else {
+        document.getElementById("output").innerHTML =
+            number + " is Not a Palindrome";
+    }
+</script>
+
+</body>
+</html>

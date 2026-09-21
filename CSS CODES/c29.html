@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Variables</title>
+
+    <style>
+
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #dbeafe;
+            --text-color: #1e293b;
+            --card-radius: 15px;
+            --main-padding: 25px;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            color: var(--text-color);
+            background-color: var(--secondary-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: var(--main-padding);
+            text-align: center;
+        }
+
+        .card {
+            width: 300px;
+            margin: 50px auto;
+            padding: var(--main-padding);
+
+            background-color: white;
+
+            border-radius: var(--card-radius);
+
+            box-shadow: 0 5px 15px #aaa;
+        }
+
+        .button {
+            display: block;
+            text-align: center;
+
+            background-color: var(--primary-color);
+            color: white;
+
+            padding: 12px;
+
+            border-radius: var(--card-radius);
+
+            text-decoration: none;
+        }
+
+        .button:hover {
+            opacity: 0.8;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>CSS Custom Properties</h1>
+
+    </header>
+
+
+    <div class="card">
+
+        <h2>CSS Variables</h2>
+
+        <p>
+            This card uses custom properties defined
+            inside the :root selector.
+        </p>
+
+        <a href="#" class="button">
+            Learn More
+        </a>
+
+    </div>
+
+</body>
+</html>

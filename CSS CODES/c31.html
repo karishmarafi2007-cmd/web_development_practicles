@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Gradients</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 30px;
+            background: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .linear {
+            width: 80%;
+            height: 180px;
+            margin: 30px auto;
+
+            background: linear-gradient(
+                to right,
+                #2563eb,
+                #9333ea,
+                #ec4899
+            );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+
+            border-radius: 15px;
+        }
+
+        .radial {
+            width: 300px;
+            height: 300px;
+            margin: 30px auto;
+
+            background: radial-gradient(
+                circle,
+                #fef08a,
+                #f97316,
+                #dc2626
+            );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            font-weight: bold;
+
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Gradients</h1>
+
+    <div class="linear">
+        Linear Gradient
+    </div>
+
+    <div class="radial">
+        Radial Gradient
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Interactive Webpage</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav button {
+            margin: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px gray;
+        }
+
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        #message {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                padding: 15px;
+            }
+
+            nav button {
+                width: 100%;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>My Interactive Webpage</h1>
+
+        <p>HTML + CSS + JavaScript</p>
+
+    </header>
+
+
+    <nav>
+
+        <button onclick="showHome()">Home</button>
+
+        <button onclick="showAbout()">About</button>
+
+        <button onclick="changeTheme()">Change Theme</button>
+
+    </nav>
+
+
+    <div class="container">
+
+        <div class="card">
+
+            <h2 id="title">Welcome!</h2>
+
+            <p id="content">
+                Welcome to my interactive webpage.
+            </p>
+
+            <button onclick="changeMessage()">
+                Click Me
+            </button>
+
+            <p id="message"></p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Counter</h2>
+
+            <h3 id="count">0</h3>
+
+            <button onclick="increase()">+</button>
+
+            <button onclick="decrease()">−</button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        let count = 0;
+
+        function changeMessage() {
+
+            document.getElementById("message").innerHTML =
+                "Thank you for clicking the button! 🎉";
+        }
+
+
+        function increase() {
+
+            count++;
+
+            document.getElementById("count").innerHTML =
+                count;
+        }
+
+
+        function decrease() {
+
+            count--;
+
+            document.getElementById("count").innerHTML =
+                count;
+        }
+
+
+        function showHome() {
+
+            document.getElementById("title").innerHTML =
+                "Welcome Home!";
+
+            document.getElementById("content").innerHTML =
+                "This is the home section of the webpage.";
+        }
+
+
+        function showAbout() {
+
+            document.getElementById("title").innerHTML =
+                "About Us";
+
+            document.getElementById("content").innerHTML =
+                "This webpage demonstrates HTML, CSS and JavaScript.";
+        }
+
+
+        function changeTheme() {
+
+            document.body.style.backgroundColor =
+                document.body.style.backgroundColor === "lightblue"
+                ? "#f2f2f2"
+                : "lightblue";
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Methods</title>
+</head>
+<body>
+
+<h2>Array Methods</h2>
+<pre id="output"></pre>
+
+<script>
+    let numbers = [10, 20, 30];
+
+    numbers.push(40);
+
+    let removed = numbers.pop();
+
+    numbers.unshift(5);
+
+    let first = numbers.shift();
+
+    let doubled = numbers.map(function(number) {
+        return number * 2;
+    });
+
+    let even = numbers.filter(function(number) {
+        return number % 2 === 0;
+    });
+
+    document.getElementById("output").textContent =
+        "Array: " + numbers + "\n" +
+        "Doubled: " + doubled + "\n" +
+        "Even Numbers: " + even;
+</script>
+
+</body>
+</html>

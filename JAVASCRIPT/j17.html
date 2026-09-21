@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Methods</title>
+</head>
+<body>
+
+<h2>String Methods</h2>
+<pre id="output"></pre>
+
+<script>
+    let text = "JavaScript Programming";
+
+    let result =
+        "Original String: " + text + "\n" +
+        "Length: " + text.length + "\n" +
+        "Uppercase: " + text.toUpperCase() + "\n" +
+        "Lowercase: " + text.toLowerCase() + "\n" +
+        "First 10 characters: " + text.slice(0, 10) + "\n" +
+        "Includes JavaScript: " + text.includes("JavaScript") + "\n" +
+        "Replace: " + text.replace("JavaScript", "JS");
+
+    document.getElementById("output").textContent = result;
+</script>
+
+</body>
+</html>

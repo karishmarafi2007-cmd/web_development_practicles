@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 70 - Dark Mode</title>
+
+    <style>
+        :root {
+            --background: #ffffff;
+            --text: #222222;
+            --card: #f4f4f4;
+            --primary: #007bff;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: var(--background);
+            color: var(--text);
+            transition: 0.4s;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .card {
+            background-color: var(--card);
+            padding: 30px;
+            margin-top: 30px;
+            border-radius: 12px;
+        }
+
+        .toggle {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        #dark {
+            display: none;
+        }
+
+        #dark:checked ~ .page {
+            --background: #121212;
+            --text: #ffffff;
+            --card: #222222;
+            --primary: #00aaff;
+        }
+
+        .page {
+            min-height: 100vh;
+            background-color: var(--background);
+            color: var(--text);
+            transition: 0.4s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="checkbox" id="dark">
+
+    <div class="page">
+
+        <div class="container">
+
+            <h1>Dark Mode Website</h1>
+
+            <label for="dark" class="toggle">
+                Toggle Dark Mode
+            </label>
+
+            <div class="card">
+
+                <h2>Welcome</h2>
+
+                <p>
+                    This dark mode is created using CSS variables
+                    without JavaScript.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

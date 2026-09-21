@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Hover Effect</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f3f4f6;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .image-container {
+            width: 400px;
+            max-width: 90%;
+
+            margin: 40px auto;
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 15px;
+        }
+
+        .image-container img {
+            width: 100%;
+
+            display: block;
+
+            transition:
+                transform 0.5s,
+                filter 0.5s;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.15);
+
+            filter: brightness(60%);
+        }
+
+        .caption {
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            padding: 20px;
+
+            background: rgba(0, 0, 0, 0.6);
+
+            color: white;
+
+            transform: translateY(100%);
+
+            transition: 0.5s;
+        }
+
+        .image-container:hover .caption {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Image Hover Effect</h1>
+
+    <div class="image-container">
+
+        <img
+            src="https://picsum.photos/600/400"
+            alt="Sample Image"
+        >
+
+        <div class="caption">
+            Beautiful Image
+        </div>
+
+    </div>
+
+</body>
+</html>

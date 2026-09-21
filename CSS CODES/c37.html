@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Display Properties</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        .block {
+            display: block;
+
+            background: lightblue;
+
+            padding: 15px;
+
+            margin: 10px;
+        }
+
+        .inline {
+            display: inline;
+
+            background: lightgreen;
+
+            padding: 10px;
+        }
+
+        .inline-block {
+            display: inline-block;
+
+            background: lightcoral;
+
+            padding: 20px;
+
+            width: 150px;
+
+            margin: 10px;
+        }
+
+        .none {
+            display: none;
+        }
+
+        .example {
+            border: 2px solid #333;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Display Properties</h1>
+
+    <div class="example">
+
+        <h2>Block</h2>
+
+        <div class="block">
+            Block Element
+        </div>
+
+        <h2>Inline</h2>
+
+        <span class="inline">
+            Inline 1
+        </span>
+
+        <span class="inline">
+            Inline 2
+        </span>
+
+        <h2>Inline-Block</h2>
+
+        <div class="inline-block">
+            Inline Block 1
+        </div>
+
+        <div class="inline-block">
+            Inline Block 2
+        </div>
+
+        <h2>None</h2>
+
+        <div class="none">
+            This element is hidden using display:none.
+        </div>
+
+        <p>
+            The element above does not occupy space.
+        </p>
+
+    </div>
+
+</body>
+</html>

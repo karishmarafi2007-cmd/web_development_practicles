@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrow Functions</title>
+</head>
+<body>
+
+<h2>Arrow Functions</h2>
+<p id="output"></p>
+
+<script>
+    const add = (a, b) => a + b;
+
+    const square = number => number * number;
+
+    let result1 = add(10, 20);
+    let result2 = square(5);
+
+    document.getElementById("output").innerHTML =
+        "Addition = " + result1 + "<br>" +
+        "Square = " + result2;
+</script>
+
+</body>
+</html>

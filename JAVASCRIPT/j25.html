@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Hide Element</title>
+</head>
+
+<body>
+
+    <h2 id="text">This text can be shown or hidden.</h2>
+
+    <button onclick="showElement()">Show</button>
+
+    <button onclick="hideElement()">Hide</button>
+
+    <script>
+
+        function showElement() {
+
+            document.getElementById("text").style.display = "block";
+
+        }
+
+        function hideElement() {
+
+            document.getElementById("text").style.display = "none";
+
+        }
+
+    </script>
+
+</body>
+</html>

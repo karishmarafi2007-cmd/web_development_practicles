@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Selection Methods</title>
+</head>
+<body>
+
+<h2 id="heading">DOM Methods</h2>
+
+<p class="message">Paragraph 1</p>
+<p class="message">Paragraph 2</p>
+<p class="message">Paragraph 3</p>
+
+<button onclick="changeElements()">Change Elements</button>
+
+<script>
+    function changeElements() {
+
+        // getElementById()
+        let heading = document.getElementById("heading");
+
+        heading.textContent = "Heading Changed";
+        heading.style.color = "blue";
+
+        // getElementsByClassName()
+        let paragraphs =
+            document.getElementsByClassName("message");
+
+        for (let i = 0; i < paragraphs.length; i++) {
+            paragraphs[i].style.color = "green";
+            paragraphs[i].style.fontSize = "20px";
+        }
+    }
+</script>
+
+</body>
+</html>

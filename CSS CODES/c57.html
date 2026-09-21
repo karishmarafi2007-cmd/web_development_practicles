@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 57 - Travel Website</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        header {
+            background-color: #006994;
+            color: white;
+            padding: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 120px 20px;
+            background-color: #dff6ff;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+        }
+
+        .hero button {
+            padding: 14px 30px;
+            border: none;
+            background-color: #006994;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .destinations {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .destination-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .destination {
+            background-color: white;
+            box-shadow: 0 3px 10px #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .destination img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .destination div {
+            padding: 20px;
+        }
+
+        @media (max-width: 700px) {
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .destination-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="navbar">
+
+            <h2>TravelWorld</h2>
+
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Destinations</a>
+                <a href="#">Packages</a>
+                <a href="#">Contact</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <section class="hero">
+
+        <h1>Explore The World</h1>
+
+        <p>Discover beautiful places and unforgettable experiences.</p>
+
+        <button>Explore Now</button>
+
+    </section>
+
+    <section class="destinations">
+
+        <h2>Popular Destinations</h2>
+
+        <div class="destination-container">
+
+            <div class="destination">
+                <img src="https://picsum.photos/id/1015/500/300">
+                <div>
+                    <h3>Mountains</h3>
+                    <p>Enjoy beautiful mountain views.</p>
+                </div>
+            </div>
+
+            <div class="destination">
+                <img src="https://picsum.photos/id/1016/500/300">
+                <div>
+                    <h3>Nature</h3>
+                    <p>Experience peaceful natural beauty.</p>
+                </div>
+            </div>
+
+            <div class="destination">
+                <img src="https://picsum.photos/id/1018/500/300">
+                <div>
+                    <h3>Adventure</h3>
+                    <p>Enjoy exciting adventures.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

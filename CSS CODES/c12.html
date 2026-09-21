@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Lists and Tables</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        ul {
+            list-style-type: square;
+            background-color: lightblue;
+            padding: 25px;
+        }
+
+        ol {
+            list-style-type: upper-roman;
+            background-color: lightgreen;
+            padding: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        th, td {
+            border: 2px solid black;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: darkblue;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Lists</h1>
+
+    <h2>Unordered List</h2>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+    </ul>
+
+    <h2>Ordered List</h2>
+
+    <ol>
+        <li>Learn HTML</li>
+        <li>Learn CSS</li>
+        <li>Learn JavaScript</li>
+    </ol>
+
+    <h2>CSS Table</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Marks</th>
+        </tr>
+
+        <tr>
+            <td>Karishma</td>
+            <td>Computer Science</td>
+            <td>90</td>
+        </tr>
+
+        <tr>
+            <td>Priya</td>
+            <td>Data Science</td>
+            <td>85</td>
+        </tr>
+
+        <tr>
+            <td>Rahul</td>
+            <td>AI</td>
+            <td>88</td>
+        </tr>
+    </table>
+
+</body>
+</html>

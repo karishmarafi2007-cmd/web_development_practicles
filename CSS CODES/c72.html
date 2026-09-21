@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 72 - CSS Math Functions</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: min(90%, 1000px);
+            margin: auto;
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            text-align: center;
+            color: #007bff;
+        }
+
+        .content {
+            width: min(100%, 800px);
+            margin: auto;
+            background-color: white;
+            padding: max(20px, 4vw);
+            border-radius: 12px;
+        }
+
+        p {
+            font-size: max(1rem, 1.5vw);
+            line-height: 1.6;
+        }
+
+        .box {
+            width: clamp(200px, 70%, 600px);
+            margin: 30px auto;
+            padding: 30px;
+            background-color: #e3f2fd;
+            text-align: center;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>CSS Math Functions</h1>
+
+        <div class="content">
+
+            <p>
+                This page demonstrates the use of
+                min(), max() and clamp().
+            </p>
+
+            <div class="box">
+                <h2>Responsive Box</h2>
+                <p>
+                    The width of this box changes according
+                    to the screen size.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

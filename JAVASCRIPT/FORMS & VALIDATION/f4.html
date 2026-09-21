@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup Form</title>
+</head>
+
+<body>
+
+    <h2>Signup</h2>
+
+    <form id="signupForm">
+
+        <input type="text" id="username" placeholder="Username">
+        <br><br>
+
+        <input type="password" id="password" placeholder="Password">
+        <br><br>
+
+        <input type="password" id="confirmPassword" placeholder="Confirm Password">
+        <br><br>
+
+        <button type="submit">Sign Up</button>
+
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+            let message = document.getElementById("message");
+
+            if (password !== confirmPassword) {
+                message.innerHTML = "Passwords do not match.";
+                message.style.color = "red";
+            }
+            else {
+                message.innerHTML = "Signup successful!";
+                message.style.color = "green";
+            }
+        });
+    </script>
+
+</body>
+</html>

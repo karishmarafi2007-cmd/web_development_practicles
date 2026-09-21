@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Selector Methods</title>
+</head>
+<body>
+
+<h2>querySelector and querySelectorAll</h2>
+
+<p class="text">Paragraph 1</p>
+<p class="text">Paragraph 2</p>
+<p class="text">Paragraph 3</p>
+
+<button onclick="changeText()">Change</button>
+
+<script>
+    function changeText() {
+
+        // Selects only the first matching element
+        let firstParagraph =
+            document.querySelector(".text");
+
+        firstParagraph.style.color = "red";
+
+        // Selects all matching elements
+        let allParagraphs =
+            document.querySelectorAll(".text");
+
+        for (let i = 0; i < allParagraphs.length; i++) {
+            allParagraphs[i].style.fontSize = "20px";
+        }
+    }
+</script>
+
+</body>
+</html>

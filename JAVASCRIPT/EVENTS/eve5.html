@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Bubbling and Capturing</title>
+
+    <style>
+        #outer {
+            background-color: lightblue;
+            padding: 30px;
+        }
+
+        #middle {
+            background-color: lightgreen;
+            padding: 30px;
+        }
+
+        #button {
+            padding: 15px;
+        }
+
+        #output {
+            white-space: pre-line;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Event Bubbling and Capturing</h2>
+
+<div id="outer">
+
+    Outer DIV
+
+    <div id="middle">
+
+        Middle DIV
+
+        <br><br>
+
+        <button id="button">Click Me</button>
+
+    </div>
+
+</div>
+
+<p id="output"></p>
+
+<script>
+
+let outer = document.getElementById("outer");
+let middle = document.getElementById("middle");
+let button = document.getElementById("button");
+let output = document.getElementById("output");
+
+
+// Capturing phase
+outer.addEventListener("click", function() {
+
+    output.innerHTML +=
+        "Capturing: Outer DIV<br>";
+
+}, true);
+
+
+middle.addEventListener("click", function() {
+
+    output.innerHTML +=
+        "Capturing: Middle DIV<br>";
+
+}, true);
+
+
+// Target
+button.addEventListener("click", function() {
+
+    output.innerHTML +=
+        "Target: Button<br>";
+
+});
+
+
+// Bubbling phase
+middle.addEventListener("click", function() {
+
+    output.innerHTML +=
+        "Bubbling: Middle DIV<br>";
+
+});
+
+
+outer.addEventListener("click", function() {
+
+    output.innerHTML +=
+        "Bubbling: Outer DIV<br>";
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Character Frequency</title>
+</head>
+<body>
+
+<h2>Character Frequency</h2>
+
+<script>
+    let str = "programming";
+
+    let frequency = {};
+
+    for (let i = 0; i < str.length; i++) {
+        let ch = str[i];
+
+        if (frequency[ch]) {
+            frequency[ch]++;
+        } else {
+            frequency[ch] = 1;
+        }
+    }
+
+    document.write("String = " + str + "<br><br>");
+
+    for (let ch in frequency) {
+        document.write(ch + " = " + frequency[ch] + "<br>");
+    }
+</script>
+
+</body>
+</html>

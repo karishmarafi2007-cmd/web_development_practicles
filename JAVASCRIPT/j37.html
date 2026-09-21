@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ES6 Features</title>
+</head>
+
+<body>
+
+    <h2>ES6 Features in JavaScript</h2>
+
+    <p id="output"></p>
+
+    <script>
+
+        // 1. let
+        let age = 18;
+        age = 19;
+
+        // 2. const
+        const name = "Karishma";
+
+        // 3. Template Literal
+        let message = `My name is ${name} and I am ${age} years old.`;
+
+        // 4. Array Destructuring
+        let marks = [90, 85, 95];
+
+        let [mark1, mark2, mark3] = marks;
+
+        // 5. Object Destructuring
+        let student = {
+            studentName: "Karishma",
+            course: "B.Tech",
+            cgpa: 8.7
+        };
+
+        let { studentName, course, cgpa } = student;
+
+        document.getElementById("output").innerHTML =
+            "<b>let:</b> Age = " + age + "<br><br>" +
+
+            "<b>const:</b> Name = " + name + "<br><br>" +
+
+            "<b>Template Literal:</b><br>" +
+            message + "<br><br>" +
+
+            "<b>Array Destructuring:</b><br>" +
+            "Mark 1 = " + mark1 + "<br>" +
+            "Mark 2 = " + mark2 + "<br>" +
+            "Mark 3 = " + mark3 + "<br><br>" +
+
+            "<b>Object Destructuring:</b><br>" +
+            "Name = " + studentName + "<br>" +
+            "Course = " + course + "<br>" +
+            "CGPA = " + cgpa;
+
+    </script>
+
+</body>
+</html>

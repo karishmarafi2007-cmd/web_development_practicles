@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 54 - College Homepage</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .hero {
+            background-color: #e3f2fd;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+        }
+
+        .courses {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .course-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .course {
+            padding: 30px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 700px) {
+
+            .header-content {
+                flex-direction: column;
+            }
+
+            nav {
+                margin-top: 15px;
+            }
+
+            .course-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header-content">
+
+            <h2>ABC University</h2>
+
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Courses</a>
+                <a href="#">Contact</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <section class="hero">
+
+        <h1>Welcome to ABC University</h1>
+
+        <p>Education • Innovation • Excellence</p>
+
+    </section>
+
+    <section class="courses">
+
+        <h2>Our Courses</h2>
+
+        <div class="course-container">
+
+            <div class="course">
+                <h3>Computer Science</h3>
+                <p>Learn programming and technology.</p>
+            </div>
+
+            <div class="course">
+                <h3>Data Science</h3>
+                <p>Learn data analysis and machine learning.</p>
+            </div>
+
+            <div class="course">
+                <h3>Artificial Intelligence</h3>
+                <p>Explore modern AI technologies.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 ABC University
+    </footer>
+
+</body>
+</html>

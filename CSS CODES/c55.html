@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 55 - Restaurant Webpage</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #fff8f0;
+        }
+
+        header {
+            background-color: #8b0000;
+            color: white;
+            padding: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #ffe4c4;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+        }
+
+        .menu {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .food-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .food {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #ccc;
+        }
+
+        .food h3 {
+            color: #8b0000;
+        }
+
+        footer {
+            background-color: #8b0000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 700px) {
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .food-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="navbar">
+
+            <h2>Food Paradise</h2>
+
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Menu</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <section class="hero">
+
+        <h1>Welcome to Food Paradise</h1>
+        <p>Delicious food made with love.</p>
+
+    </section>
+
+    <section class="menu">
+
+        <h2>Our Menu</h2>
+
+        <div class="food-container">
+
+            <div class="food">
+                <h3>Pizza</h3>
+                <p>Cheesy vegetable pizza.</p>
+                <strong>₹250</strong>
+            </div>
+
+            <div class="food">
+                <h3>Burger</h3>
+                <p>Fresh vegetable burger.</p>
+                <strong>₹150</strong>
+            </div>
+
+            <div class="food">
+                <h3>Pasta</h3>
+                <p>Creamy Italian pasta.</p>
+                <strong>₹200</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 Food Paradise
+    </footer>
+
+</body>
+</html>

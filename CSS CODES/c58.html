@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 58 - News Blog</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .main-news,
+        .sidebar {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .article {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .article h2 {
+            color: #007bff;
+        }
+
+        .sidebar h2 {
+            color: #007bff;
+        }
+
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 10px 0;
+        }
+
+        .sidebar a:hover {
+            color: #007bff;
+        }
+
+        @media (max-width: 700px) {
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Daily News</h1>
+        <p>Latest News and Articles</p>
+    </header>
+
+    <div class="container">
+
+        <main class="main-news">
+
+            <div class="article">
+                <h2>Technology News</h2>
+                <p>
+                    Technology continues to change the way
+                    people learn, work and communicate.
+                </p>
+            </div>
+
+            <div class="article">
+                <h2>Education News</h2>
+                <p>
+                    New educational technologies are helping
+                    students learn in interactive ways.
+                </p>
+            </div>
+
+            <div class="article">
+                <h2>Science News</h2>
+                <p>
+                    Scientists continue to make discoveries
+                    in different fields.
+                </p>
+            </div>
+
+        </main>
+
+        <aside class="sidebar">
+
+            <h2>Categories</h2>
+
+            <a href="#">Technology</a>
+            <a href="#">Education</a>
+            <a href="#">Science</a>
+            <a href="#">Sports</a>
+            <a href="#">Entertainment</a>
+
+        </aside>
+
+    </div>
+
+</body>
+</html>

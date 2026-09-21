@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display API Data</title>
+
+    <style>
+
+        .user {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h2>User Information</h2>
+
+    <button onclick="loadUsers()">Load Users</button>
+
+    <div id="users"></div>
+
+    <script>
+
+        function loadUsers() {
+
+            fetch("https://jsonplaceholder.typicode.com/users")
+
+                .then(function(response) {
+                    return response.json();
+                })
+
+                .then(function(data) {
+
+                    let container =
+                        document.getElementById("users");
+
+                    container.innerHTML = "";
+
+                    data.forEach(function(user) {
+
+                        let div =
+                            document.createElement("div");
+
+                        div.className = "user";
+
+                        div.innerHTML =
+                            "<b>Name:</b> " + user.name + "<br>" +
+                            "<b>Username:</b> " + user.username + "<br>" +
+                            "<b>Email:</b> " + user.email + "<br>" +
+                            "<b>Phone:</b> " + user.phone;
+
+                        container.appendChild(div);
+
+                    });
+
+                })
+
+                .catch(function(error) {
+
+                    document.getElementById("users").innerHTML =
+                        "Error loading data.";
+
+                    console.log(error);
+                });
+        }
+
+    </script>
+
+</body>
+</html>

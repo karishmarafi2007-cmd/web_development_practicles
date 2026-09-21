@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visibility in CSS</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        .box {
+            width: 250px;
+            padding: 25px;
+            margin: 15px;
+
+            background: lightblue;
+
+            border: 2px solid blue;
+        }
+
+        .visible {
+            visibility: visible;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        .display-none {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Visibility and Hiding Elements</h1>
+
+    <div class="box visible">
+        Visible Element
+    </div>
+
+    <div class="box hidden">
+        Hidden Element
+    </div>
+
+    <div class="box">
+        This element remains visible.
+    </div>
+
+    <div class="box display-none">
+        Display None Element
+    </div>
+
+    <p>
+        <strong>visibility: hidden</strong> hides the element
+        but keeps its space, while <strong>display: none</strong>
+        removes the element from the layout.
+    </p>
+
+</body>
+</html>

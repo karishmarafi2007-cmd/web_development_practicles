@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 68 - Sliding Card</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 350px;
+            margin: 80px auto;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .slider {
+            display: flex;
+            width: 1050px;
+            animation: slide 9s infinite;
+        }
+
+        .card {
+            width: 350px;
+            height: 250px;
+            flex-shrink: 0;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+        }
+
+        .card1 {
+            background-color: #007bff;
+        }
+
+        .card2 {
+            background-color: #28a745;
+        }
+
+        .card3 {
+            background-color: #dc3545;
+        }
+
+        @keyframes slide {
+
+            0%, 25% {
+                transform: translateX(0);
+            }
+
+            33%, 58% {
+                transform: translateX(-350px);
+            }
+
+            66%, 91% {
+                transform: translateX(-700px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Sliding Card Animation</h1>
+
+    <div class="container">
+
+        <div class="slider">
+
+            <div class="card card1">
+                Slide 1
+            </div>
+
+            <div class="card card2">
+                Slide 2
+            </div>
+
+            <div class="card card3">
+                Slide 3
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Opacity and Transparency</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 40px;
+            background: #dbeafe;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 200px;
+            height: 150px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-weight: bold;
+            color: white;
+
+            border-radius: 15px;
+        }
+
+        .normal {
+            background-color: #2563eb;
+        }
+
+        .half {
+            background-color: #2563eb;
+            opacity: 0.5;
+        }
+
+        .transparent {
+            background-color: rgba(37, 99, 235, 0.3);
+            color: black;
+        }
+
+        .very-transparent {
+            background-color: rgba(37, 99, 235, 0.1);
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Opacity and Transparency</h1>
+
+    <div class="container">
+
+        <div class="box normal">
+            100% Opacity
+        </div>
+
+        <div class="box half">
+            50% Opacity
+        </div>
+
+        <div class="box transparent">
+            30% Transparency
+        </div>
+
+        <div class="box very-transparent">
+            10% Transparency
+        </div>
+
+    </div>
+
+</body>
+</html>

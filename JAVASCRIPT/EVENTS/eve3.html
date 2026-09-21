@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Events</title>
+
+    <style>
+        input, select {
+            padding: 8px;
+            margin: 8px;
+        }
+
+        #message {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Form Events</h2>
+
+<form id="myForm">
+
+    <label>Name:</label>
+    <input type="text" id="name" placeholder="Enter name">
+
+    <br>
+
+    <label>Course:</label>
+
+    <select id="course">
+        <option value="">Select Course</option>
+        <option value="CSE">CSE</option>
+        <option value="Data Science">Data Science</option>
+        <option value="AI">AI</option>
+    </select>
+
+    <br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<p id="message"></p>
+
+<script>
+
+let form = document.getElementById("myForm");
+let nameInput = document.getElementById("name");
+let course = document.getElementById("course");
+let message = document.getElementById("message");
+
+// Focus event
+nameInput.addEventListener("focus", function() {
+    message.textContent = "Name input is focused.";
+});
+
+// Blur event
+nameInput.addEventListener("blur", function() {
+    message.textContent = "Name input lost focus.";
+});
+
+// Change event
+course.addEventListener("change", function() {
+    message.textContent =
+        "Selected Course: " + course.value;
+});
+
+// Submit event
+form.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    message.textContent =
+        "Form submitted successfully!";
+});
+
+</script>
+
+</body>
+</html>

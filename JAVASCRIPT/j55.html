@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Second Largest Element</title>
+</head>
+<body>
+
+<h2>Second Largest Element</h2>
+
+<script>
+    let numbers = [10, 25, 8, 40, 30];
+
+    let unique = [...new Set(numbers)];
+
+    unique.sort(function(a, b) {
+        return b - a;
+    });
+
+    document.write("Array = " + numbers + "<br>");
+    document.write("Largest = " + unique[0] + "<br>");
+    document.write("Second Largest = " + unique[1]);
+</script>
+
+</body>
+</html>

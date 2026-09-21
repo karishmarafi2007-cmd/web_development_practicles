@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pseudo Classes</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            padding: 40px;
+        }
+
+        a {
+            color: blue;
+            font-size: 20px;
+        }
+
+        /* Mouse over */
+        a:hover {
+            color: red;
+        }
+
+        /* Visited link */
+        a:visited {
+            color: purple;
+        }
+
+        /* While clicking */
+        button:active {
+            background-color: red;
+            color: white;
+        }
+
+        /* Input selected */
+        input:focus {
+            border: 3px solid blue;
+            outline: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 20px;
+        }
+
+        input {
+            padding: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Pseudo Classes</h1>
+
+    <a href="https://example.com">
+        Hover and Visit this Link
+    </a>
+
+    <br><br>
+
+    <button>
+        Click Me
+    </button>
+
+    <br>
+
+    <input
+        type="text"
+        placeholder="Click inside this box"
+    >
+
+</body>
+</html>

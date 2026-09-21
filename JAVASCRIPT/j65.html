@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Regular Expressions</title>
+</head>
+<body>
+
+<h2>Regular Expressions</h2>
+
+<script>
+    let text = "JavaScript 123";
+
+    // Check whether text contains digits
+    let digitRegex = /\d+/;
+
+    // Check whether text contains only letters
+    let letterRegex = /^[A-Za-z]+$/;
+
+    // Check whether text contains the word JavaScript
+    let wordRegex = /JavaScript/;
+
+    document.write("Text = " + text + "<br><br>");
+
+    document.write(
+        "Contains digits: " + digitRegex.test(text) + "<br>"
+    );
+
+    document.write(
+        "Contains only letters: " + letterRegex.test(text) + "<br>"
+    );
+
+    document.write(
+        "Contains 'JavaScript': " + wordRegex.test(text)
+    );
+</script>
+
+</body>
+</html>

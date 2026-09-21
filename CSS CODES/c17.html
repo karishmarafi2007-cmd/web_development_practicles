@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transitions and Transformations</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+
+            background-color: lightblue;
+
+            margin: 50px auto;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            transition: 0.5s;
+        }
+
+        .box:hover {
+            transform: scale(1.2)
+                       rotate(10deg)
+                       translateY(-20px);
+
+            background-color: lightgreen;
+
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Transition and Transform</h1>
+
+    <p>Move your mouse over the box.</p>
+
+    <div class="box">
+        Hover Me
+    </div>
+
+</body>
+</html>

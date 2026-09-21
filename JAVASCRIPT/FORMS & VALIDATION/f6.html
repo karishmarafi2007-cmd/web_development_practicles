@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Admission Form</title>
+</head>
+
+<body>
+
+    <h2>College Admission Form</h2>
+
+    <form id="admissionForm">
+
+        <label>Student Name:</label>
+        <input type="text" id="name">
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" id="email">
+        <br><br>
+
+        <label>Phone:</label>
+        <input type="text" id="phone">
+        <br><br>
+
+        <label>Course:</label>
+
+        <select id="course">
+            <option value="">Select Course</option>
+            <option>Computer Science</option>
+            <option>Data Science</option>
+            <option>Artificial Intelligence</option>
+        </select>
+
+        <br><br>
+
+        <label>Percentage:</label>
+        <input type="number" id="percentage">
+        <br><br>
+
+        <button type="submit">Apply</button>
+
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        document.getElementById("admissionForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let course = document.getElementById("course").value;
+            let percentage = document.getElementById("percentage").value;
+
+            let message = document.getElementById("message");
+
+            if (name === "") {
+                message.innerHTML = "Enter student name.";
+            }
+            else if (email === "") {
+                message.innerHTML = "Enter email.";
+            }
+            else if (phone.length !== 10) {
+                message.innerHTML = "Enter a valid 10-digit phone number.";
+            }
+            else if (course === "") {
+                message.innerHTML = "Select a course.";
+            }
+            else if (percentage === "" || percentage < 0 || percentage > 100) {
+                message.innerHTML = "Enter a valid percentage.";
+            }
+            else {
+                message.innerHTML = "Admission form submitted successfully!";
+                message.style.color = "green";
+                return;
+            }
+
+            message.style.color = "red";
+        });
+    </script>
+
+</body>
+</html>

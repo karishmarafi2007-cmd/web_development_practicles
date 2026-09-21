@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Positive Negative Zero</title>
+</head>
+<body>
+
+<h2>Check Number</h2>
+<p id="output"></p>
+
+<script>
+    let number = Number(prompt("Enter a number:"));
+
+    if (number > 0) {
+        document.getElementById("output").innerHTML =
+            "The number is Positive";
+    } else if (number < 0) {
+        document.getElementById("output").innerHTML =
+            "The number is Negative";
+    } else {
+        document.getElementById("output").innerHTML =
+            "The number is Zero";
+    }
+</script>
+
+</body>
+</html>
