@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Table Records</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 600px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: lightblue;
+        }
+
+        input {
+            padding: 10px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Search / Filter Student Records</h2>
+
+<input
+    type="text"
+    id="search"
+    placeholder="Search student..."
+    onkeyup="searchTable()"
+>
+
+<br><br>
+
+<table id="studentTable">
+
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Course</th>
+    </tr>
+
+    <tr>
+        <td>1</td>
+        <td>Karishma</td>
+        <td>Data Science</td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>Ananya</td>
+        <td>CSE</td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>Rahul</td>
+        <td>ECE</td>
+    </tr>
+
+    <tr>
+        <td>4</td>
+        <td>Priya</td>
+        <td>AI</td>
+    </tr>
+
+</table>
+
+<script>
+
+function searchTable() {
+
+    let input = document.getElementById("search");
+
+    let filter = input.value.toLowerCase();
+
+    let table = document.getElementById("studentTable");
+
+    let rows = table.getElementsByTagName("tr");
+
+    for (let i = 1; i < rows.length; i++) {
+
+        let text = rows[i].textContent.toLowerCase();
+
+        if (text.includes(filter)) {
+            rows[i].style.display = "";
+        } else {
+            rows[i].style.display = "none";
+        }
+    }
+}
+
+</script>
+
+</body>
+</html>

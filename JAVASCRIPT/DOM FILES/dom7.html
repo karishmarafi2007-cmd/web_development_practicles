@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic CSS Classes</title>
+
+    <style>
+        .normal {
+            color: black;
+            background-color: lightgray;
+            padding: 20px;
+        }
+
+        .highlight {
+            color: white;
+            background-color: blue;
+            padding: 20px;
+            font-size: 25px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Dynamic CSS Class</h2>
+
+<p id="text" class="normal">
+    This is a paragraph.
+</p>
+
+<button onclick="addClass()">Add Class</button>
+
+<button onclick="removeClass()">Remove Class</button>
+
+<script>
+    function addClass() {
+
+        let text = document.getElementById("text");
+
+        text.classList.add("highlight");
+    }
+
+    function removeClass() {
+
+        let text = document.getElementById("text");
+
+        text.classList.remove("highlight");
+    }
+</script>
+
+</body>
+</html>

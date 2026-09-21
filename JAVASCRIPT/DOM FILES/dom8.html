@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Table</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 500px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Dynamic Table</h2>
+
+<button onclick="createTable()">Create Table</button>
+
+<div id="tableContainer"></div>
+
+<script>
+    function createTable() {
+
+        let table = document.createElement("table");
+
+        // Header row
+        let headerRow = document.createElement("tr");
+
+        let headers = ["ID", "Name", "Course"];
+
+        for (let i = 0; i < headers.length; i++) {
+
+            let th = document.createElement("th");
+
+            th.textContent = headers[i];
+
+            headerRow.appendChild(th);
+        }
+
+        table.appendChild(headerRow);
+
+        // Data
+        let students = [
+            [1, "Karishma", "CSE"],
+            [2, "Rahul", "ECE"],
+            [3, "Ananya", "CSE"]
+        ];
+
+        for (let i = 0; i < students.length; i++) {
+
+            let row = document.createElement("tr");
+
+            for (let j = 0; j < students[i].length; j++) {
+
+                let cell = document.createElement("td");
+
+                cell.textContent = students[i][j];
+
+                row.appendChild(cell);
+            }
+
+            table.appendChild(row);
+        }
+
+        document.getElementById("tableContainer")
+            .appendChild(table);
+    }
+</script>
+
+</body>
+</html>

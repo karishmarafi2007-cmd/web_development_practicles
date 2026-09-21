@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add and Delete Table Rows</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 600px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: lightblue;
+        }
+
+        button {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Add and Delete Rows</h2>
+
+<input type="text" id="name" placeholder="Enter Name">
+<input type="text" id="course" placeholder="Enter Course">
+
+<button onclick="addRow()">Add Row</button>
+
+<br><br>
+
+<table id="studentTable">
+
+    <tr>
+        <th>Name</th>
+        <th>Course</th>
+        <th>Action</th>
+    </tr>
+
+    <tr>
+        <td>Karishma</td>
+        <td>Data Science</td>
+        <td>
+            <button onclick="deleteRow(this)">Delete</button>
+        </td>
+    </tr>
+
+</table>
+
+<script>
+
+function addRow() {
+
+    let name = document.getElementById("name").value;
+    let course = document.getElementById("course").value;
+
+    if (name === "" || course === "") {
+        alert("Please enter both Name and Course");
+        return;
+    }
+
+    let table = document.getElementById("studentTable");
+
+    let row = table.insertRow();
+
+    let cell1 = row.insertCell(0);
+    let cell2 = row.insertCell(1);
+    let cell3 = row.insertCell(2);
+
+    cell1.textContent = name;
+    cell2.textContent = course;
+
+    cell3.innerHTML =
+        '<button onclick="deleteRow(this)">Delete</button>';
+
+    document.getElementById("name").value = "";
+    document.getElementById("course").value = "";
+}
+
+function deleteRow(button) {
+
+    let row = button.parentNode.parentNode;
+
+    row.remove();
+}
+
+</script>
+
+</body>
+</html>

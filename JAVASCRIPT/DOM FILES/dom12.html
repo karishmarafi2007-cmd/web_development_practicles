@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Show Hide</title>
+
+    <style>
+        input {
+            padding: 10px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Password Show / Hide</h2>
+
+<input
+    type="password"
+    id="password"
+    placeholder="Enter Password"
+>
+
+<button onclick="showHidePassword()">
+    Show
+</button>
+
+<script>
+
+function showHidePassword() {
+
+    let password = document.getElementById("password");
+
+    let button = document.querySelector("button");
+
+    if (password.type === "password") {
+
+        password.type = "text";
+        button.textContent = "Hide";
+
+    } else {
+
+        password.type = "password";
+        button.textContent = "Show";
+    }
+}
+
+</script>
+
+</body>
+</html>

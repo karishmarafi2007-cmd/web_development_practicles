@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Multiple Elements</title>
+</head>
+<body>
+
+<h2 id="heading">Original Heading</h2>
+
+<p id="para1">Original Paragraph 1</p>
+
+<p id="para2">Original Paragraph 2</p>
+
+<button onclick="changeElements()">Change All</button>
+
+<script>
+    function changeElements() {
+
+        document.getElementById("heading").textContent =
+            "Updated Heading";
+
+        document.getElementById("para1").textContent =
+            "Paragraph 1 has been changed.";
+
+        document.getElementById("para2").textContent =
+            "Paragraph 2 has been changed.";
+
+        document.getElementById("heading").style.color = "blue";
+        document.getElementById("para1").style.color = "green";
+        document.getElementById("para2").style.color = "red";
+    }
+</script>
+
+</body>
+</html>
