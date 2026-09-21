@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>My Portfolio</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #f4f4f4;
+            color: #222;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            min-height: 300px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 15px auto;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px gray;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .dark {
+            background: #111;
+            color: white;
+        }
+
+        .dark .card {
+            background: #222;
+            color: white;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>My Portfolio</h1>
+
+    <nav>
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+    <button onclick="toggleTheme()">
+        Toggle Theme
+    </button>
+
+</header>
+
+<section id="home">
+
+    <h1>Welcome to My Portfolio</h1>
+
+    <p>
+        Hello! I am a B.Tech student interested in
+        Programming, Data Science and Web Development.
+    </p>
+
+    <button onclick="showMessage()">
+        Click Me
+    </button>
+
+    <p id="message"></p>
+
+</section>
+
+<section id="about">
+
+    <div class="card">
+
+        <h2>About Me</h2>
+
+        <p>
+            I am a student learning HTML, CSS,
+            JavaScript, Python and Data Structures.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="projects">
+
+    <h2>My Projects</h2>
+
+    <div class="card">
+
+        <h3>Student Management System</h3>
+
+        <p>
+            A simple application for managing student information.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h3>DSA Visualizer</h3>
+
+        <p>
+            An interactive project for visualizing data structures.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h3>Weather Application</h3>
+
+        <p>
+            A weather application using an API.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <div class="card">
+
+        <h2>Contact Me</h2>
+
+        <input type="text"
+               id="contactName"
+               placeholder="Your Name">
+
+        <br><br>
+
+        <input type="email"
+               id="contactEmail"
+               placeholder="Your Email">
+
+        <br><br>
+
+        <textarea id="contactMessage"
+                  placeholder="Your Message"></textarea>
+
+        <br><br>
+
+        <button onclick="sendMessage()">
+            Send Message
+        </button>
+
+        <p id="contactResult"></p>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>© 2026 My Portfolio</p>
+
+</footer>
+
+<script>
+
+function showMessage() {
+
+    document.getElementById("message").innerHTML =
+        "Thank you for visiting my portfolio!";
+
+}
+
+function sendMessage() {
+
+    let name =
+        document.getElementById("contactName").value;
+
+    let email =
+        document.getElementById("contactEmail").value;
+
+    let message =
+        document.getElementById("contactMessage").value;
+
+    if (name === "" || email === "" || message === "") {
+
+        document.getElementById("contactResult").innerHTML =
+            "Please fill all fields.";
+
+    }
+    else {
+
+        document.getElementById("contactResult").innerHTML =
+            "Message sent successfully!";
+
+    }
+
+}
+
+function toggleTheme() {
+
+    document.body.classList.toggle("dark");
+
+}
+
+</script>
+
+</body>
+</html>
