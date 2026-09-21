@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+
+    <h2>Shopping Cart</h2>
+
+    <button onclick="add('Laptop', 50000)">
+        Laptop ₹50000
+    </button>
+
+    <button onclick="add('Mobile', 20000)">
+        Mobile ₹20000
+    </button>
+
+    <button onclick="add('Headphones', 2000)">
+        Headphones ₹2000
+    </button>
+
+    <h3>Cart</h3>
+
+    <ul id="cart"></ul>
+
+    <h3>Total: ₹<span id="total">0</span></h3>
+
+<script>
+
+let items = [];
+let total = 0;
+
+function add(name, price) {
+
+    items.push({
+        name: name,
+        price: price
+    });
+
+    total += price;
+
+    display();
+
+}
+
+function display() {
+
+    let cart = document.getElementById("cart");
+
+    cart.innerHTML = "";
+
+    items.forEach(function(item) {
+
+        let li = document.createElement("li");
+
+        li.innerHTML =
+            item.name + " - ₹" + item.price;
+
+        cart.appendChild(li);
+
+    });
+
+    document.getElementById("total").innerHTML = total;
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Double Click Event</title>
+
+    <style>
+        #box {
+            width: 300px;
+            height: 150px;
+            background-color: lightblue;
+            text-align: center;
+            padding-top: 50px;
+            box-sizing: border-box;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Double-Click Event</h2>
+
+<div id="box">
+    Double Click Me
+</div>
+
+<script>
+
+let box = document.getElementById("box");
+
+box.addEventListener("dblclick", function() {
+
+    box.textContent = "You Double-Clicked Me!";
+
+    box.style.backgroundColor = "lightgreen";
+
+    box.style.color = "darkgreen";
+});
+
+</script>
+
+</body>
+</html>

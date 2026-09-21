@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade Calculator</title>
+</head>
+
+<body>
+
+    <h2>Student Grade Calculator</h2>
+
+    <input type="number" id="mark1" placeholder="Subject 1">
+    <br><br>
+
+    <input type="number" id="mark2" placeholder="Subject 2">
+    <br><br>
+
+    <input type="number" id="mark3" placeholder="Subject 3">
+    <br><br>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <p id="result"></p>
+
+<script>
+
+function calculate() {
+
+    let m1 = Number(document.getElementById("mark1").value);
+    let m2 = Number(document.getElementById("mark2").value);
+    let m3 = Number(document.getElementById("mark3").value);
+
+    let total = m1 + m2 + m3;
+    let average = total / 3;
+
+    let grade;
+
+    if (average >= 90)
+        grade = "A+";
+    else if (average >= 80)
+        grade = "A";
+    else if (average >= 70)
+        grade = "B";
+    else if (average >= 60)
+        grade = "C";
+    else if (average >= 50)
+        grade = "D";
+    else
+        grade = "F";
+
+    document.getElementById("result").innerHTML =
+        "Total: " + total +
+        "<br>Average: " + average.toFixed(2) +
+        "<br>Grade: " + grade;
+
+}
+
+</script>
+
+</body>
+</html>

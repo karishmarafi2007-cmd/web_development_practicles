@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes Application</title>
+</head>
+
+<body>
+
+    <h2>Notes Application</h2>
+
+    <textarea id="note"
+              rows="5"
+              cols="40"
+              placeholder="Write your note"></textarea>
+
+    <br><br>
+
+    <button onclick="saveNote()">Save Note</button>
+
+    <button onclick="loadNote()">Load Note</button>
+
+    <button onclick="deleteNote()">Delete Note</button>
+
+    <p id="result"></p>
+
+<script>
+
+function saveNote() {
+
+    let note = document.getElementById("note").value;
+
+    localStorage.setItem("myNote", note);
+
+    alert("Note saved!");
+
+}
+
+function loadNote() {
+
+    let note = localStorage.getItem("myNote");
+
+    document.getElementById("note").value =
+        note || "";
+
+}
+
+function deleteNote() {
+
+    localStorage.removeItem("myNote");
+
+    document.getElementById("note").value = "";
+
+    document.getElementById("result").innerHTML =
+        "Note deleted.";
+
+}
+
+</script>
+
+</body>
+</html>

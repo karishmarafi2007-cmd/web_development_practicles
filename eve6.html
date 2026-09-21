@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Delegation</title>
+
+    <style>
+        li {
+            padding: 10px;
+            margin: 5px;
+            background-color: lightblue;
+            cursor: pointer;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Event Delegation</h2>
+
+<ul id="studentList">
+
+    <li>Karishma</li>
+    <li>Ananya</li>
+    <li>Rahul</li>
+    <li>Priya</li>
+
+</ul>
+
+<p id="output"></p>
+
+<script>
+
+let list = document.getElementById("studentList");
+let output = document.getElementById("output");
+
+list.addEventListener("click", function(event) {
+
+    if (event.target.tagName === "LI") {
+
+        output.textContent =
+            "You selected: " + event.target.textContent;
+
+        event.target.style.backgroundColor =
+            "lightgreen";
+    }
+
+});
+
+</script>
+
+</body>
+</html>
