@@ -1,22 +1,73 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Web Development Practicals</title>
-<style>body{font-family:system-ui,sans-serif;max-width:960px;margin:2rem auto;padding:0 1rem;line-height:1.5}li{margin:.35rem 0}a{color:#0969da}</style>
+<meta name="description" content="A glassmorphism portfolio of HTML, CSS and JavaScript practical projects by Karishma Rafi.">
+<title>Karishma Rafi | Web Development Lab</title>
+<style>
+:root{--ink:#f7f9ff;--muted:#b8c0d9;--line:rgba(255,255,255,.16);--glass:rgba(255,255,255,.09);--purple:#9b8cff;--cyan:#65e6e0;--pink:#ff8ecb}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#090b1b;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.orb{position:fixed;border-radius:50%;filter:blur(4px);opacity:.65;pointer-events:none;z-index:-1;animation:float 12s ease-in-out infinite}
+.orb.one{width:28rem;height:28rem;top:-9rem;left:-8rem;background:#5d47d9}
+.orb.two{width:22rem;height:22rem;right:-6rem;top:28%;background:#087c9b;animation-delay:-4s}
+.orb.three{width:18rem;height:18rem;bottom:-6rem;left:36%;background:#a83c88;animation-delay:-8s}
+@keyframes float{50%{transform:translate(24px,28px) scale(1.08)}}
+.shell{width:min(1160px,calc(100% - 2.5rem));margin:auto}
+.glass{background:var(--glass);border:1px solid var(--line);box-shadow:0 24px 80px rgba(0,0,0,.25),inset 0 1px rgba(255,255,255,.1);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px)}
+nav{display:flex;align-items:center;justify-content:space-between;padding:1.3rem 0}
+.brand{display:flex;align-items:center;gap:.75rem;font-weight:800;letter-spacing:.03em}
+.brand-mark{display:grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:14px;background:linear-gradient(135deg,var(--purple),var(--cyan));color:#101329;font-size:1.1rem;box-shadow:0 8px 30px rgba(101,230,224,.25)}
+.nav-links{display:flex;gap:1.4rem;color:var(--muted);font-size:.9rem}.nav-links a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:center;padding:6rem 0 5rem}
+.eyebrow{display:inline-flex;gap:.55rem;align-items:center;color:var(--cyan);font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.eyebrow:before{content:"";width:2rem;height:1px;background:var(--cyan)}
+h1{font-size:clamp(3.2rem,8vw,6.8rem);line-height:.94;letter-spacing:-.075em;margin:1.25rem 0 1.5rem;max-width:780px}
+.gradient-text{background:linear-gradient(100deg,#fff 10%,var(--purple) 48%,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-copy{max-width:600px;color:var(--muted);font-size:1.1rem}
+.actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}.button{display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--line);border-radius:999px;padding:.78rem 1.15rem;font-weight:750;transition:.25s}.button.primary{border:0;color:#111427;background:linear-gradient(100deg,var(--cyan),#b5f4df)}.button:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(101,230,224,.18)}
+.hero-card{position:relative;padding:1.3rem;border-radius:28px;transform:rotate(2deg)}.hero-card:after{content:"";position:absolute;inset:1rem;border:1px solid rgba(255,255,255,.1);border-radius:20px;pointer-events:none}
+.terminal-top{display:flex;gap:.4rem;margin-bottom:1.5rem}.dot{width:.65rem;height:.65rem;border-radius:50%;background:#ff7c9e}.dot:nth-child(2){background:#ffd166}.dot:nth-child(3){background:#66e3af}
+.code{font:500 .92rem/2 "SFMono-Regular",Consolas,monospace;color:#d8dcf5}.code .accent{color:var(--cyan)}.code .purple{color:var(--purple)}.code .pink{color:var(--pink)}
+section{padding:2.5rem 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1.4rem}.section-head h2{font-size:2rem;letter-spacing:-.04em;margin:0}.section-head p{color:var(--muted);margin:0}
+.toolbar{display:flex;gap:.7rem;flex-wrap:wrap;margin-bottom:1.5rem}.filter,.search{border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--ink);border-radius:999px;padding:.65rem 1rem}.filter{cursor:pointer}.filter.active,.filter:hover{background:rgba(155,140,255,.3);border-color:rgba(155,140,255,.65)}.search{margin-left:auto;min-width:210px;outline:none}.search::placeholder{color:#8991ae}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.project{display:flex;flex-direction:column;min-height:225px;padding:1.35rem;border-radius:22px;transition:.3s}.project:hover{transform:translateY(-7px);border-color:rgba(101,230,224,.5);background:rgba(255,255,255,.13)}.project-icon{display:grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:12px;margin-bottom:1.2rem;background:rgba(255,255,255,.1);font-size:1.25rem}.project h3{margin:0 0 .35rem;font-size:1.15rem}.project p{margin:0;color:var(--muted);font-size:.9rem}.project-link{margin-top:auto;padding-top:1rem;color:var(--cyan);font-size:.85rem;font-weight:750}.project-link span{transition:.2s}.project:hover .project-link span{padding-left:.3rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.stat{padding:1.2rem 1.4rem;border-radius:18px}.stat strong{display:block;font-size:2rem;letter-spacing:-.05em}.stat span{color:var(--muted);font-size:.85rem}
+footer{display:flex;justify-content:space-between;gap:1rem;padding:3rem 0 2rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+@media(max-width:820px){.hero{grid-template-columns:1fr;padding:4rem 0}.hero-card{max-width:500px}.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.shell{width:min(100% - 1.4rem,1160px)}.nav-links{display:none}h1{font-size:3.6rem}.grid,.stats{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:.35rem}.search{margin-left:0;width:100%}footer{display:block}footer span{display:block;margin-top:.5rem}}
+</style>
 </head>
 <body>
-<h1>Web Development Practicals</h1>
-<ul>
-<li><a href=".gitignore">.gitignore</a></li>
-<li><a href="package.json">package.json</a></li>
-<li><a href="README.md">README.md</a></li>
-<li><a href="server.js">server.js</a></li>
-<li><a href="assets/">assets/</a></li>
-<li><a href="CSS%20CODES/">CSS CODES/</a></li>
-<li><a href="HTML%20CODES/">HTML CODES/</a></li>
-<li><a href="JAVASCRIPT/">JAVASCRIPT/</a></li>
-</ul>
+<div class="orb one"></div><div class="orb two"></div><div class="orb three"></div>
+<div class="shell">
+<nav><a class="brand" href="./"><span class="brand-mark">KR</span><span>WEB LAB / 01</span></a><div class="nav-links"><a href="#work">Explore work</a><a href="README.md">About the lab</a></div></nav>
+<main>
+<section class="hero">
+<div><div class="eyebrow">Frontend playground</div><h1>Ideas become <span class="gradient-text">interactive.</span></h1><p class="hero-copy">Welcome to my web development lab — a growing collection of practical experiments, tiny interfaces, and JavaScript-powered moments built while learning by doing.</p><div class="actions"><a class="button primary" href="#work">Explore the collection <span>↗</span></a><a class="button" href="README.md">Read the story</a></div></div>
+<div class="hero-card glass"><div class="terminal-top"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><div class="code"><div><span class="purple">const</span> <span class="accent">portfolio</span> = {</div><div>&nbsp;&nbsp;maker: <span class="pink">'Karishma Rafi'</span>,</div><div>&nbsp;&nbsp;focus: [<span class="pink">'HTML'</span>, <span class="pink">'CSS'</span>,</div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="pink">'JavaScript'</span>],</div><div>&nbsp;&nbsp;status: <span class="pink">'always building'</span></div><div>};</div></div></div>
+</section>
+<section class="stats"><div class="stat glass"><strong>3</strong><span>core technologies</span></div><div class="stat glass"><strong>150+</strong><span>hands-on examples</span></div><div class="stat glass"><strong>∞</strong><span>ways to experiment</span></div></section>
+<section id="work"><div class="section-head"><div><h2>Explore the lab</h2><p>Choose a collection and start exploring.</p></div></div><div class="toolbar"><button class="filter active" data-filter="all">All projects</button><button class="filter" data-filter="html">HTML</button><button class="filter" data-filter="css">CSS</button><button class="filter" data-filter="javascript">JavaScript</button><input class="search" id="search" type="search" placeholder="Search collections..." aria-label="Search collections"></div><div class="grid" id="projects">
+<a class="project glass" data-type="html" data-name="html codes" href="HTML%20CODES/"><span class="project-icon">◈</span><h3>HTML Codes</h3><p>Structure, semantics, forms, tables, media and the building blocks of the web.</p><span class="project-link">Open collection <span>→</span></span></a>
+<a class="project glass" data-type="css" data-name="css codes" href="CSS%20CODES/"><span class="project-icon">✦</span><h3>CSS Codes</h3><p>Layouts, selectors, animations, responsive design and visual experiments.</p><span class="project-link">Open collection <span>→</span></span></a>
+<a class="project glass" data-type="javascript" data-name="javascript" href="JAVASCRIPT/"><span class="project-icon">✺</span><h3>JavaScript</h3><p>Core language practice, DOM manipulation, events, forms and mini projects.</p><span class="project-link">Open collection <span>→</span></span></a>
+<a class="project glass" data-type="javascript" data-name="dom files" href="JAVASCRIPT/DOM%20FILES/"><span class="project-icon">⌘</span><h3>DOM Files</h3><p>Small interactive pages that make the browser document come alive.</p><span class="project-link">Open collection <span>→</span></span></a>
+<a class="project glass" data-type="javascript" data-name="events" href="JAVASCRIPT/EVENTS/"><span class="project-icon">⚡</span><h3>Events</h3><p>Clicks, input, keyboard and browser events turned into useful interactions.</p><span class="project-link">Open collection <span>→</span></span></a>
+<a class="project glass" data-type="javascript" data-name="forms validation" href="JAVASCRIPT/FORMS%20%26%20VALIDATION/"><span class="project-icon">✓</span><h3>Forms & Validation</h3><p>Friendly form experiences with validation logic and immediate feedback.</p><span class="project-link">Open collection <span>→</span></span></a>
+<a class="project glass" data-type="javascript" data-name="mini projects" href="JAVASCRIPT/Mini%20Projects/"><span class="project-icon">⌁</span><h3>Mini Projects</h3><p>Focused builds that combine skills into playful, practical browser apps.</p><span class="project-link">Open collection <span>→</span></a>
+</div></section>
+</main>
+<footer><span>© 2026 Karishma Rafi · Built with curiosity.</span><span>HTML · CSS · JavaScript</span></footer>
+</div>
+<script>
+const filters=document.querySelectorAll('.filter'), cards=document.querySelectorAll('.project'), search=document.querySelector('#search');
+function update(){const active=document.querySelector('.filter.active').dataset.filter, query=search.value.toLowerCase().trim();cards.forEach(card=>{const matchesType=active==='all'||card.dataset.type===active;const matchesSearch=card.dataset.name.includes(query);card.style.display=matchesType&&matchesSearch?'flex':'none'})}
+filters.forEach(filter=>filter.addEventListener('click',()=>{filters.forEach(item=>item.classList.remove('active'));filter.classList.add('active');update()}));search.addEventListener('input',update);
+</script>
 </body>
 </html>
