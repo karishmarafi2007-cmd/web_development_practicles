@@ -32,18 +32,26 @@ const server = http.createServer((request, response) => {
     }
 
     fs.stat(filePath, (error, stats) => {
-        if (error || !stats.isFile()) {
+        if (error) {
             send(response, 404, "Not Found", "text/plain; charset=utf-8");
             return;
         }
 
-        const contentType = contentTypes[path.extname(filePath).toLowerCase()] || "application/octet-stream";
-        response.writeHead(200, { "Content-Type": contentType });
-        if (request.method === "HEAD") {
-            response.end();
-            return;
-        }
-        fs.createReadStream(filePath).pipe(response);
+        const resolvedPath = stats.isDirectory() ? path.join(filePath, "index.html") : filePath;
+        fs.stat(resolvedPath, (indexError, indexStats) => {
+            if (indexError || !indexStats.isFile()) {
+                send(response, 404, "Not Found", "text/plain; charset=utf-8");
+                return;
+            }
+
+            const contentType = contentTypes[path.extname(resolvedPath).toLowerCase()] || "application/octet-stream";
+            response.writeHead(200, { "Content-Type": contentType });
+            if (request.method === "HEAD") {
+                response.end();
+                return;
+            }
+            fs.createReadStream(resolvedPath).pipe(response);
+        });
     });
 });
 
