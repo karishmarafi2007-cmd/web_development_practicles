@@ -3,20 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>JAVASCRIPT\EVENTS</title>
-<style>body{font-family:system-ui,sans-serif;max-width:960px;margin:2rem auto;padding:0 1rem;line-height:1.5}li{margin:.35rem 0}a{color:#0969da}</style>
+<meta name="description" content="Events collection — Clicks, input, keyboard and browser events turned into interactions">
+<title>Events | Web Development Lab</title>
+<link rel="stylesheet" href="../../assets/collection.css">
 </head>
 <body>
-<h1>JAVASCRIPT\EVENTS</h1>
-<ul>
-<li><a href="eve1.html">eve1.html</a></li>
-<li><a href="eve2.html">eve2.html</a></li>
-<li><a href="eve3.html">eve3.html</a></li>
-<li><a href="eve4.html">eve4.html</a></li>
-<li><a href="eve5.html">eve5.html</a></li>
-<li><a href="eve6.html">eve6.html</a></li>
-<li><a href="eve7.html">eve7.html</a></li>
-<li><a href="eve8.html">eve8.html</a></li>
-</ul>
+<div class="shell">
+<nav><a class="brand" href="../../"><span class="mark">KR</span><span>WEB LAB / 01</span></a><a href="../../#work">&lt;- Back to portfolio</a></nav>
+<header><div class="eyebrow">Practical collection</div><h1>Events</h1><p>Clicks, input, keyboard and browser events turned into interactions. Explore each example below and see the idea in action.</p></header>
+<main id="work"><div class="toolbar"><input class="search" id="search" type="search" placeholder="Search examples..." aria-label="Search examples"></div><div class="grid" id="items">
+<a class="item glass" href="eve1.html"><span class="item-icon">EV</span><span class="item-name">eve1.html</span><span class="item-arrow">-&gt;</span></a>
+<a class="item glass" href="eve2.html"><span class="item-icon">EV</span><span class="item-name">eve2.html</span><span class="item-arrow">-&gt;</span></a>
+<a class="item glass" href="eve3.html"><span class="item-icon">EV</span><span class="item-name">eve3.html</span><span class="item-arrow">-&gt;</span></a>
+<a class="item glass" href="eve4.html"><span class="item-icon">EV</span><span class="item-name">eve4.html</span><span class="item-arrow">-&gt;</span></a>
+<a class="item glass" href="eve5.html"><span class="item-icon">EV</span><span class="item-name">eve5.html</span><span class="item-arrow">-&gt;</span></a>
+<a class="item glass" href="eve6.html"><span class="item-icon">EV</span><span class="item-name">eve6.html</span><span class="item-arrow">-&gt;</span></a>
+<a class="item glass" href="eve7.html"><span class="item-icon">EV</span><span class="item-name">eve7.html</span><span class="item-arrow">-&gt;</span></a>
+<a class="item glass" href="eve8.html"><span class="item-icon">EV</span><span class="item-name">eve8.html</span><span class="item-arrow">-&gt;</span></a>
+</div></main>
+<footer><a href="../../">Karishma Rafi · Web Development Lab</a></footer>
+</div>
+<script>const search=document.querySelector('#search'),items=document.querySelectorAll('.item');search.addEventListener('input',()=>{const q=search.value.toLowerCase().trim();items.forEach(item=>{item.style.display=item.textContent.toLowerCase().includes(q)?'flex':'none'})});</script>
 </body>
 </html>
